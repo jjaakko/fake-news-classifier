@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/jjaakko/fake-news-classifier/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<img src="assets/images/me.jpg" alt="Photo" hspace="20" width="30%" align="right"/> My name is Dean Rahman. I came to University of Helsinki from New York city (originally I'm from Detroit). I am interested in applying machine learning to language technology (for example machine translation) and trading US Futures. Previously I have done work in Data Visualization, Product Development, Supply Chain, Sourcing & Procurement, Corporate Strategy, Operational Finance and Organizational Change Management in the Technology, Automotive, Oil & Gas and Medical Device industries.
 
-### Markdown
+## You can see more details about my work on my CV, LinkedIn profile or GitHub page
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[CV](https://www.overleaf.com/read/sgqdmjtjbcqq), [LinkedIn](https://www.linkedin.com/in/deanrahman), [GitHub](https://github.com/dean-rahman/)
 
-```markdown
-Syntax highlighted code block
+## Contact
 
-# Header 1
-## Header 2
-### Header 3
+My email address is of the form first_name.last_name@helsinki.fi. 
 
-- Bulleted
-- List
+## Courses I've Taken
 
-1. Numbered
-2. List
+[MATHEMATICS FOR LINGUISTS](https://courses.helsinki.fi/en/kik-lg209/130394667), Spring 2018
 
-**Bold** and _Italic_ and `Code` text
+[INTRODUCTION TO LANGUAGE TECHNOLOGY](https://courses.helsinki.fi/en/kik-405/130355898), Fall 2019
 
-[Link](url) and ![Image](src)
-```
+## Projects
+[Repository for setting up this webpage (cmdline-course Github project)](https://github.com/dean-rahman/dean-rahman.github.io)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[Number of births per Finnish maternity clinic nurse, average for maakunta (static map)](https://autogis-2018.github.io/exercise-5-dean-rahman/Exercise_5_Problem_1_static_map_w_basemap.png)
 
-### Jekyll Themes
+[Interactive map, created in Geopandas](https://autogis-2018.github.io/exercise-5-dean-rahman/Exercise_5_Problem_2_Interactive_Map.html)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jjaakko/fake-news-classifier/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Misc. 
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[My favorite activities outside work are learning languages with my wife Elina and swimming with my son Kaleb and daughter Aurora.](https://www.espoo.fi/en-US/Culture_and_sport/Sports/Sports_and_Recreation_Facilities/Swimming_halls/Leppavaara) 
