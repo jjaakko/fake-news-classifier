@@ -5,12 +5,15 @@ layout: default
 ## Introduction
 
 <img src="assets/images/me.jpg" alt="Photo" hspace="20" width="30%" align="right"/> 
-We have built a . 
-I came to University of Helsinki from New York city (originally I'm from Detroit). 
-I am interested in applying machine learning to language technology (for example machine translation) and trading US Futures. 
-Previously I have done work in Data Visualization, Product Development, Supply Chain, Sourcing & Procurement, Corporate Strategy, Operational Finance and Organizational Change Management in the Technology, Automotive, Oil & Gas and Medical Device industries.
+We have built a text classification system for predicting whether a news article is real or fake. 
+We did this for a project for the course [Introduction to Data Science](https://courses.helsinki.fi/en/kik-lg209/130394667) at University of Helsinki in Fall of 2020, taught by Prof. Teemu Roos and assisted by Saska Donges and Ioanna Buori.
+To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch] (LINK to pitch).
+This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
+Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
+We believe that truth investigators would want to understand at this level of detail in order to have confidence to use our system's automatically generated truth assessment as a starting point or a way to prioritize their work.
+For full details on the algorithms, please see our [technical report].
 
-## You can see more details about my work on my CV, LinkedIn profile or GitHub page
+## We gathered data from our target users
 
 [CV](https://www.overleaf.com/read/sgqdmjtjbcqq), [LinkedIn](https://www.linkedin.com/in/deanrahman), [GitHub](https://github.com/dean-rahman/)
 
