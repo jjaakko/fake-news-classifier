@@ -1,1 +1,5 @@
-theme: jekyll-theme-cayman
+title: Dean Rahman
+description: This is Dean Rahman's homepage.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-hacker
