@@ -6,7 +6,7 @@ layout: default
 
 <img src="assets/images/me.jpg" alt="Photo" hspace="20" width="30%" align="right"/> 
 We have built a text classification system for predicting whether a news article is real or fake. 
-We did this for a project for the course [Introduction to Data Science](https://courses.helsinki.fi/en/kik-lg209/130394667) at University of Helsinki in Fall of 2020, taught by Prof. Teemu Roos and assisted by Saska Donges and Ioanna Buori.
+#We did this for a project for the course [Introduction to Data Science](https://courses.helsinki.fi/en/kik-lg209/130394667) at University of Helsinki in Fall of 2020, taught by Prof. Teemu Roos and assisted by Saska Dönges and Ioanna Buori.
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch] (LINK to pitch).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
