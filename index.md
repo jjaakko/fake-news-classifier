@@ -4,7 +4,6 @@ layout: default
 
 ## Introduction
 
-<img src="assets/images/me.jpg" alt="Photo" hspace="20" width="30%" align="right"/> 
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
@@ -20,9 +19,10 @@ This means that disinformation spreads further and faster online than it ever co
 [Rand.org](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank) has compiled a list of all the services that seek to ascertain the accuracy of information.
 There are fewer than 40 of them in the US, a country with (244 million social media users)[https://www.statista.com/statistics/273476/percentage-of-us-population-with-a-social-network-profile/#:~:text=In%20the%20United%20States%2C%20an,exceed%20257%20million%20by%202023.]. 
 Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
+<img src="assets/images/me.jpg" alt="Photo" hspace="20" width="30%" align="center"/> 
 We obtained gold labels for nearly 70000 articles from the three services which we perceived to be the most renouned (based only on our experience).
 These articles were labeled as "fake" or "not fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
-Human-labeled instances which are presumed to be correct are referred to as "gold labels."
+Human-labeled instances which are presumed to be correct are referred to as "gold labels."<br>
 #Include visualization here of the 70000 articles, e.g. (y-axis snopes or emergent or politifact vs x-axis fake or not fake)
  
 
