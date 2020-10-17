@@ -14,7 +14,17 @@ For full details on the algorithms, please see our [technical report].
 
 ## We gathered data from our target users
 
-[CV](https://www.overleaf.com/read/sgqdmjtjbcqq), [LinkedIn](https://www.linkedin.com/in/deanrahman), [GitHub](https://github.com/dean-rahman/)
+Social media has fundamentally changed information, giving the public direct access to more information than ever before. 
+But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
+This means that disinformation spreads further and faster online than it ever could before.
+[Rand.org](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank) has compiled a list of all the services that seek to ascertain the accuracy of information.
+There are fewer than 40 of them in the US, a country with (244 million social media users)[https://www.statista.com/statistics/273476/percentage-of-us-population-with-a-social-network-profile/#:~:text=In%20the%20United%20States%2C%20an,exceed%20257%20million%20by%202023.]. 
+Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
+We obtained gold labels for nearly 70000 articles from the three services which we perceived to be the most renouned (based only on our experience).
+These articles were labeled as "fake" or "not fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
+Human-labeled instances which are presumed to be correct are referred to as "gold labels."
+#Include visualization here of the 70000 articles, e.g. (y-axis snopes or emergent or politifact vs x-axis fake or not fake)
+ 
 
 ## Contact
 
