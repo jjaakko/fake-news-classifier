@@ -44,7 +44,7 @@ Different measures from this list are important to different members of the NLP 
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
 
 ## Looking at the data
-
+Word frequencies.
 Below you can find how different articles are distributed in terms of word count.
 From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
