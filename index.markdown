@@ -24,7 +24,9 @@ This means that disinformation spreads further and faster online than it ever co
 There are fewer than 40 such services in the US, a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/). 
 Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
 
-{% include_relative _includes/html/picture_d_1.html %}
+<br>
+<img src="assets/images/Slide3.JPG" alt="Photo" hspace="0" vspace="30" width="100%" align="center"/>
+<br>
 
 We obtained gold labels for nearly 70000 articles from the three services which we perceived to be the most renouned (based only on our experience).
 These articles were labeled as "fake" or "not fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
