@@ -31,28 +31,10 @@ Human-labeled instances which are presumed to be correct are referred to as "gol
 Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
 A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).<br>
-<img src="assets/images/Slide3.JPG" alt="Photo" hspace="0" width="30%" align="center"/>  
-
+<img src="assets/images/Model_A_Confusion.jpg.JPG" alt="Photo" hspace="0" width="30%" align="center"/>
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
 
 
-My email address is of the form first_name.last_name@helsinki.fi. 
-
-## Courses I've Taken
-
-[MATHEMATICS FOR LINGUISTS](https://courses.helsinki.fi/en/kik-lg209/130394667), Spring 2018
-
-[INTRODUCTION TO LANGUAGE TECHNOLOGY](https://courses.helsinki.fi/en/kik-405/130355898), Fall 2019
-
-## Projects
-[Repository for setting up this webpage (cmdline-course Github project)](https://github.com/dean-rahman/dean-rahman.github.io)
-
-[Number of births per Finnish maternity clinic nurse, average for maakunta (static map)](https://autogis-2018.github.io/exercise-5-dean-rahman/Exercise_5_Problem_1_static_map_w_basemap.png)
-
-[Interactive map, created in Geopandas](https://autogis-2018.github.io/exercise-5-dean-rahman/Exercise_5_Problem_2_Interactive_Map.html)
-
-## Misc. 
-
-[My favorite activities outside work are learning languages with my wife Elina and swimming with my son Kaleb and daughter Aurora.](https://www.espoo.fi/en-US/Culture_and_sport/Sports/Sports_and_Recreation_Facilities/Swimming_halls/Leppavaara) 
+All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
