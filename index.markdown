@@ -31,14 +31,6 @@ These articles were labeled as "fake" or "not fake" by [snopes.com](https://www.
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."<br>
 #Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not fake)
  
-## Looking at the data
-
-Below you can find how different articles are distributed in terms of word count.
-
-From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
-
-{% include_relative /_includes/html/histogram.html %}
-
 ## Simple explanation of performance measures in natural language processing (NLP)
 
 Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
@@ -49,5 +41,10 @@ To see the exact formula for calculating F1 based on accuracy and precision, ple
 Different measures from this list are important to different members of the NLP field.
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
 
+## Looking at the data
+
+Below you can find how different articles are distributed in terms of word count.
+From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
+{% include_relative /_includes/html/histogram.html %}
 
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
