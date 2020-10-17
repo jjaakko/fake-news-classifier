@@ -25,7 +25,7 @@ There are fewer than 40 such services in the US, a country with [223 million soc
 Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
 
 <br>
-<img src="./assets/images/Slide3.JPG" alt="Photo" hspace="0" vspace="30" width="100%" align="center"/>
+<img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="30" width="100%" align="center"/>
 <br>
 
 We obtained gold labels for nearly 70000 articles from the three services which we perceived to be the most renouned (based only on our experience).
