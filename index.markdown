@@ -39,8 +39,11 @@ A confusion matrix presents in a table the fundamental measures of performance i
 <img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="left"/>
 
 We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
-We used our the remaining (approximately) 90% of the articles and used them to "train" a model we will call Model A.
-Then we put Model A to work on the 6940 articles it had never "seen."
+We used our the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
+(There is also a Model-B to be described soon.)
+Then we put Model-A to work on the 6940 articles it had never "seen."
+Of the 5175 articles (i.e. 4180 + 995) that had been labeled by Snopes or Emergent as not fake (True label: 0), Model-A assessed 4180 of them correctly as not fake (Predicted label: 0) and 995 incorrectly as fake (Predicted label: 1).
+
 
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
