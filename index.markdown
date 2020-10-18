@@ -4,6 +4,7 @@
 
 layout: home
 ---
+## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
@@ -35,10 +36,10 @@ While the spread of lies through fake news ultimately leads people to doubt the 
 Fortunately, neither are the different measures of accuracy in fake new prediction as difficult for a non-mathematically inclined person as a confidence interval.<br>
 <br> Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
 A funny name, yes, but we hope the reason for it will become clear.
-A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).
-<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="left"/>
+A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).<br>
+<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 
-We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
+<br>We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
 We used our the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
@@ -50,6 +51,7 @@ Then we put Model-A to work on the 6940 articles it had never "seen."
 <br> Model-A assessed
 <br> 559 incorrectly as not fake (Predicted label: 0) and
 <br> 1206 correctly as fake (Predicted label: 1).
+<br> The overall "accuracy" of Model-A is then 
 
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
