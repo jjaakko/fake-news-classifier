@@ -20,9 +20,7 @@ This means that disinformation spreads further and faster online than it ever co
 There are fewer than 40 such services in the US, a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/). 
 Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
 
-<br>
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
-<br>
 
 We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
 These articles were labeled as "fake" or "not fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
@@ -30,6 +28,7 @@ Human-labeled instances which are presumed to be correct are referred to as "gol
 #Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not fake)
  
 ## Simple explanation of performance measures in natural language processing (NLP)
+
 Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
 A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).<br>
