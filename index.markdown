@@ -33,7 +33,7 @@ Human-labeled instances which are presumed to be correct are referred to as "gol
 Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
 A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).<br>
-<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="15" width="50%" align="left"/>
+<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="left"/>
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
