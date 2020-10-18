@@ -4,7 +4,6 @@
 
 layout: home
 ---
-## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
@@ -28,8 +27,13 @@ Human-labeled instances which are presumed to be correct are referred to as "gol
 #Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not fake)
  
 ## Simple explanation of performance measures in natural language processing (NLP)
-
-Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
+We did this as a project for the course [Introduction to Data Science at University of Helsinki in Fall of 2020](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2021-b449b3af-1ec9-4a04-8a4c-20461c02dbc4), taught by [Prof. Teemu Roos](https://www.cs.helsinki.fi/u/ttonteri/) assisted by [Saska Dönges](https://fuksiwiki.tko-aly.fi/Tuutorit2019#Tutor_Saska_D.C3.B6nges) and [Ioanna Bouri](https://www.linkedin.com/in/ioannabouri/?originalSubdomain=fi).
+One of the parameters of the project was to separate out the explanation/message to our target users (i.e. this blog you are reading) from a technical report to our instructors.
+This did not mean that the blog had to be completely devoid of quantitative concepts.
+For example, if a team were doing a project for better prediction of pregnancy of an individual or if a tumor is malignant, that team would be encouraged to explain to the their target users the concept of a confidence interval from statistics.
+While the spread of lies through fake news ultimately leads people to doubt the truth and our project is therefore very serious, it is not so serious at a single moment as someone finding out whether or not they pregrant or will get cancer.
+Fortunately, neither are the different measures of accuracy in fake new prediction as difficult for a non-mathematically inclined person as a confidence interval.<br>
+<br> Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
 A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).<br>
 <img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="left"/>
