@@ -15,10 +15,16 @@ For full details on the algorithms, please see our [technical report](link to te
 ## We gathered data from our target users
 Social media has fundamentally changed information, giving the public direct access to more information than ever before. 
 But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
+The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/)
+
+
+<img src="./assets/images/278409.PNG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+
 This means that disinformation spreads further and faster online than it ever could before.
 [Rand.org](www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
-There are fewer than 40 such services in the US--a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/). 
-Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
+For the 223 million social media users, there are fewer than 40 such services in the US. 
+Some of these focus on photos and videos.
+Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
 
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
@@ -69,6 +75,7 @@ So we have to dig deeper.
 
 What about [precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
 * Of the times Model-A made an assessment of not-fake, how many times was it correct? 
+
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
@@ -89,6 +96,6 @@ The future work items we can talk about here are as follows:
 * Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
   While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our pitch.
   [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
-<img src="./assets/images/EUvsDisinfoTeaser.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>  
 * To see more technical next steps, please see our [technical report](link to technical report).
+
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
