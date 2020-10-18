@@ -18,7 +18,7 @@ But with the recent proliferation of low-quality or false content, it has become
 The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/)
 
 
-<img src="./assets/images/278409.PNG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="./assets/images/278409.png" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 This means that disinformation spreads further and faster online than it ever could before.
 [Rand.org](www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
