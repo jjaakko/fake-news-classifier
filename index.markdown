@@ -16,7 +16,7 @@ Social media has fundamentally changed information, giving the public direct acc
 But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
 This means that disinformation spreads further and faster online than it ever could before.
 [Rand.org](www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
-There are fewer than 40 such services in the US, a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/). 
+There are fewer than 40 such services in the US--a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/). 
 Of the services that assess text (some focus on photos and videos), the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
 
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
@@ -35,8 +35,13 @@ While the spread of lies through fake news ultimately leads people to doubt the 
 Fortunately, neither are the different measures of accuracy in fake new prediction as difficult for a non-mathematically inclined person as a confidence interval.<br>
 <br> Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
 A funny name, yes, but we hope the reason for it will become clear.
-A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).<br>
+A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).
 <img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="left"/>
+
+We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
+We used our the remaining (approximately) 90% of the articles and used them to "train" a model we will call Model A.
+Then we put Model A to work on the 6940 articles it had never "seen."
+
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
