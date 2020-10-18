@@ -44,7 +44,7 @@ We used our the remaining (approximately) 90% of the articles and used them to [
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
 * Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as not-fake (True label: 0), 
- * Model-A assessed 
+  * Model-A assessed 
    * 4180 of them correctly as not-fake (Predicted label: 0) and 
    * 995 incorrectly as fake (Predicted label: 1).
 * Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (True label: 1), 
@@ -54,18 +54,41 @@ Then we put Model-A to work on the 6940 articles it had never "seen."
 * The overall "accuracy" of Model-A is then 5386 (i.e. 4180 + 1206) correct divided by all 6940 or 77.61%.
   This simple accuracy is rarely used for scenarios where the outcome is not close to 50-50. 
   For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled not-fake 0 by humans.
+  (The training set of articles were in the same proportion of fakes to not-fakes as this testing set).
   So all we had to do is have a Model-0 that just always guessed not-fake and we would have an accuracy of 74.6%.
   Compared to this, our Model-A, who was working extremely hard, doesn't seem so impressive.
-  So we have to dig deeper.
 
+So we have to dig deeper.
+* How many of the not-fakes did Model-A assess correctly? 80.77% (i.e. 4180/(4180 + 995)). 
+  This is the percentage of not-fakes Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to not-fakes.
+* What is the recall of Model-A with respect to fakes? 68.3% (i.e. 1206/(1206 + 559)). 
+  Model-0 would have had a recall of 0% for fakes because it would have blindly guessed not-fake for all.
+  So Model-A is doing a lot better.
+* Stating simply "the recall of Model-A" usually refers to recall with respect to the label for which Model-0 would have recalled 0%.
+  So the recall of our Model-A is 68.3%
+
+What about [precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
+* Of the times Model-A made an assessment of not-fake, how many times was it correct? 
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
 For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
 
-## Looking at the data
+## The Story of Ghidora
 Word frequencies.
 Below you can find how different articles are distributed in terms of word count.
 From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
 
+## Future work
+The future work items we can talk about here are as follows:
+* We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
+  All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
+* Our hypothesis is that one way we can improve the models with respect to the stories is to exclude all the words the occured only once.
+  If this is successful, we will push the threshold frequency for words to exclude (e.g. all words with frequency less than 10 or 20, etc. will be excluded as features).
+* An easier item will be to rerun our models or improved versions thereof with the articles labeled by Politifact.
+* Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
+  While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our pitch.
+  [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
+<img src="./assets/images/EUvsDisinfoTeaser.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>  
+* To see more technical next steps, please see our [technical report](link to technical report).
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
