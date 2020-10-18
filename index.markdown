@@ -4,6 +4,7 @@
 
 layout: home
 ---
+## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
