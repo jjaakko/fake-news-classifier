@@ -23,9 +23,9 @@ Of the services that assess text (some focus on photos and videos), the gross ma
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
-These articles were labeled as "fake" or "not fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
+These articles were labeled as "fake" or "not-fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."<br>
-#Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not fake)
+#Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not-fake)
  
 ## Simple explanation of performance measures in natural language processing (NLP)
 We did this as a project for the course [Introduction to Data Science at University of Helsinki in Fall of 2020](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2021-b449b3af-1ec9-4a04-8a4c-20461c02dbc4), taught by [Prof. Teemu Roos](https://www.cs.helsinki.fi/u/ttonteri/) assisted by [Saska Dönges](https://fuksiwiki.tko-aly.fi/Tuutorit2019#Tutor_Saska_D.C3.B6nges) and [Ioanna Bouri](https://www.linkedin.com/in/ioannabouri/?originalSubdomain=fi).
@@ -43,15 +43,20 @@ A confusion matrix presents in a table the fundamental measures of performance i
 We used our the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
-<br> Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as not fake (True label: 0), 
-<br> Model-A assessed 
-<br> 4180 of them correctly as not fake (Predicted label: 0) and 
-<br> 995 incorrectly as fake (Predicted label: 1).
-<br> Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (True label: 1), 
-<br> Model-A assessed
-<br> 559 incorrectly as not fake (Predicted label: 0) and
-<br> 1206 correctly as fake (Predicted label: 1).
-<br> The overall "accuracy" of Model-A is then 
+* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as not-fake (True label: 0), 
+ * Model-A assessed 
+   * 4180 of them correctly as not-fake (Predicted label: 0) and 
+   * 995 incorrectly as fake (Predicted label: 1).
+* Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (True label: 1), 
+  * Model-A assessed 
+    * 559 incorrectly as not-fake (Predicted label: 0) and
+    * 1206 correctly as fake (Predicted label: 1).
+* The overall "accuracy" of Model-A is then 5386 (i.e. 4180 + 1206) correct divided by all 6940 or 77.61%.
+  This simple accuracy is rarely used for scenarios where the outcome is not close to 50-50. 
+  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled not-fake 0 by humans.
+  So all we had to do is have a Model-0 that just always guessed not-fake and we would have an accuracy of 74.6%.
+  Compared to this, our Model-A, who was working extremely hard, doesn't seem so impressive.
+  So we have to dig deeper.
 
 To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
 Different measures from this list are important to different members of the NLP field.
