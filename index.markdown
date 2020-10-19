@@ -9,10 +9,10 @@ title: Blog
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
-This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
+This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
-We believe that truth investigators would want to understand at this level of detail in order to have confidence to use our system's automatically generated truth assessment.
-We propose that they do this for a starting point or as a way to prioritize their work.
+We believe that truth investigators would want to understand at this level of detail in order to have the confidence to use our system's automatically generated truth assessment.
+We propose that they use it at least as a starting point or as a way to prioritize what must be endless work.
 For full details on the algorithms, please see our [technical report](link to technical report).
 
 ## For Data, We Gathered News Articles Gold-labeled by Some of Our Target Users
@@ -146,10 +146,16 @@ Both of these issues greatly burden a model's training and probability of assess
 
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 An explanation of TF-IDF and how we used it can be found in our [technical report](link to technical report).
-However, we want to leave you with an intuition about TF-IDF based on this word cloud based on Flea's [series of] article[s] [one of] which contains ghidora.
+However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] which contains ghidora.
 <div style="text-align: center">
 <img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
+The intuition behind TF-IDF is that it considers important those words that are common in a particular document but not common in the other documents in the data set. 
+The mathematical formulation of TF-IDF produces high scores for these document-specific important words.
+The largest words in the word cloud above appear the most in Flea's archive while not appearing so much in the other articles.
+Of course, the word sizes are proportional to the TF-IDF scores which decrease as the word sizes decrease.
+Luckily, in this case, Flea is actually a credible underground journalist with a distinct vocabulary and his blog [Ghost of a Flea](http://www.ghostofaflea.com/archives/2005_03.html) does not have advertising. 
+This may help explain why this article was assessed correctly as not fake by Model A despite its complications.
 
 ## What about Model B?
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
@@ -177,32 +183,33 @@ This improved our recall dramatically albeit at the cost of precision (and less 
 
 An explanation of doc2Vec and how we used them can be found in our [technical report](link to technical report).
 However, we want to leave you with an intuition about word2vec and by extension doc2vec based on the visualizations below representing the words "gender," "god" (we have lowercased all words for the models) and "drug."
-We have done some research with how the words have been used in both the real and fake articles. 
-For this, we employed a word embedding model (wikipedia link to word embeddings). 
-We did this by first converting the words to numerical representations, and then comparing the similarity of these vectors. 
-This is achievable because similar words tend to have similar contexts, and we can then model semantic relations as geometric ones.
-We borrow code from the TWEC project (git link here) and have written our own visualization code (link to the file in git?). 
+
+Words can be represented as points in high dimensional space.
+(We exist in three dimensional space, but mathematically, it is possible to represent an infinite dimension).
+Computationally, we converted all the words from the fake articles in points represented in 300 dimensions.
+These high dimensional points are represented by coordinate combinations called vectors.
+We did the same for all the words in the not-fake articles.
+For this, we employed a [word embedding model](https://en.wikipedia.org/wiki/Word_embedding). 
+Then we compared similarity of these vectors. 
+This is achievable because similar words tend to have similar contexts, and we can then relationships between meanings (semantic relations) as geometric ones (spatial relations).
 First, we take a target word, e.g. “gender.” 
-We then take the top 10 most similar words to “gender” from both the real news articles and the fake news articles. 
-Then, we plot all of the words, including the real news version of “gender” and the fake news version of “gender,” and see if we can gain any insights. 
+The vector for "gender" as used in the fake articles is not exactly the same as the vector for the same word in the not-fake articles.
+We then take the top 10 most similar words to “gender” from both the fake news articles and the not-fake news articles. 
+We can plot all of the words, including the fake-news version of “gender” and the not-fake news version of “gender” in two dimensional coordinates using projections.
+(Think of a projection as the shadow of the point from 300-dimensional space.) 
 Let’s see this example play out!
 
 <div style="text-align: center">
 <img src="assets/images/gender.bmp" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-As we can see, the word “gender” when talked about in fake articles, is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in real articles, the word is more similar to transgender, intersex, dysphoria and genders. We can speculate from this that the real news version of gender is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
+As we can see, the word “gender” when talked about in fake articles (at the top middle of the diagram), is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in not-fake articles, the word is more similar to transgender, intersex, dysphoria and genders. 
+We can speculate from this that the not-fake news version of gender (still in the middle but almost at the bottom) is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
 
-<br>Below, we can see the different topics that our target word “God” occurs in. 
+<br>Below, we can see the different topics that our target word “God” occurs with. 
 <div style="text-align: center">
 <img src="assets/images/god.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-Whereas the real news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
-
-<br>Finally, we can see the visualization below for the word 'drug'
-<div style="text-align: center">
-<img src="assets/images/drugs.jpeg" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
-</div>
-
+Whereas the not-fake news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” (in the lower right corner) is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
 
 ## Future Work
 To see more technical next steps, please see our [technical report](link to technical report). 
