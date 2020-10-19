@@ -140,7 +140,7 @@ This led us to a perfect example which illustrates why an article can be problem
 <div style="text-align: right">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
+The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/) and 'ghidora' is very far down the list.
 This demonstrates that a model can encounter a source which could include both fake and not fake news.
 Moreover URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probabily of assessing the plain text from a URL correctly. 
