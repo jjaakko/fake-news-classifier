@@ -41,7 +41,6 @@ Human-labeled instances which are presumed to be correct are referred to as "gol
 
 {% include_relative /_includes/html/documents_researched_per_organization.html %}
 
-# Include visualization(s) here of the 70000 articles (fake or not-fake)
 Below is an interactive frequency bar-chart showing the lengths of the 70000 articles in terms of word count.
 Most articles fall in the category of 500 words or fewer. You can hover the over the bars to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
@@ -148,7 +147,7 @@ We created Model-A using an algorithm based on something called [term frequencyâ
 An explanation of TF-IDF and how we used it can be found in our [technical report](link to technical report).
 However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] which contains ghidora.
 <div style="text-align: center">
-<img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
+<img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 The intuition behind TF-IDF is that it considers important those words that are common in a particular document but not common in the other documents in the data set. 
 The mathematical formulation of TF-IDF produces high scores for these document-specific important words.
