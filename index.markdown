@@ -125,11 +125,21 @@ As it turned out, a similar level of complications existed in some of the articl
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TFIDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
 An explanation of TFIDF and doc2Vec and how we used them can be found in our [technical report](link to technical report).
-At first, we trained and tested Model-B in an "unbalanced" way. 
+At first, we trained and tested Model-B in an "unbalanced" way for which the confusion matrix is shown below. 
+
+<div style="text-align: center">
+<img src="assets/images/unchanged.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+</div>
+
 Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
 Finding the recall so low, we prioritized improving it and looked into various ways as to how.
 One method we found was to draw samples in a (still random) way which matches the ratios of the not-fake to fake from the 70000 articles in both the training set and testing set.
-We subsequently built both Model-A (performance given above) and Model-B in this "balanced" way.
+We subsequently built both Model-A (performance given above) and Model-B in this "balanced" way for which the confusion matrix is shown below.
+
+<div style="text-align: center">
+<img src="assets/images/balanced.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+</div>
+
 Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
 This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
 
