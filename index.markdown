@@ -60,7 +60,7 @@ A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).
 
 <div style="text-align: center">
-<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="60%" align="center"/>
 </div>
 
 We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
@@ -121,7 +121,7 @@ As it turned out, a similar level of complications existed in some of the articl
 ## The Story of Ghidora
 Below is the typical shape of a diagram showing the most commonly occuring words in a collection of texts such as ours and how often each word occurs.
 <div style="text-align: center">
-<img src="assets/images/English_Raw_Top_40.png alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/English_Raw_Top_40.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
 
 The most common words are all boring structural words as shown in this example. 
@@ -136,7 +136,7 @@ Except one time, we saw the rare word 'ghidora.'
 We decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
 <div style="text-align: right">
-<img src="assets/images/ghidora.JPG alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea] (http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
 This demonstrates that a model can encounter a source which could include both fake and not fake news.
