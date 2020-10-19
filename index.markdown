@@ -146,9 +146,9 @@ Both of these issues greatly burden a model's training and probability of assess
 
 
 ## What about Model B?
-We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TFIDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
+We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
-An explanation of TFIDF and doc2Vec and how we used them can be found in our [technical report](link to technical report).
+An explanation of TF-IDF and doc2Vec and how we used them can be found in our [technical report](link to technical report).
 At first, we trained and tested Model-B in an "unbalanced" way for which the confusion matrix is shown below. 
 
 <div style="text-align: center">
