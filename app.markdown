@@ -6,17 +6,17 @@ permalink: /App/
 
 # Below are images of the current version of our app was demo'd to Saska Dönges and Group 3 on 2020 October 14th.
 
-Our model welcomes the user (Think Terminator 2, not Terminator 1).
+Our model welcomes the user below (Think Terminator 2, not Terminator 1).
 <div style="text-align: center">
 <img src="./assets/images/App_1_welcome_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
-The user pastes the article.
+The user pastes the article below.
 <div style="text-align: center">
-<img src="./assets/images/App_2_paste_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="./assets/images/App_2_Paste_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
-Our model provides its assessment.
+Our model provides its assessment below.
 <div style="text-align: center">
 <img src="./assets/images/App_3_assessment_output_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
