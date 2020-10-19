@@ -36,7 +36,7 @@ Of the services that assess text, the gross majority have fewer than 25 employee
 </div>
 
 We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
-These articles were labeled as "fake" or "not-fake" mostly by [snopes.com](https://www.snopes.com/) (67285), but also by [emergent.info](http://www.emergent.info/) (651) and [politifact.com](https://www.politifact.com/) (1460).
+These articles were labeled as "fake" or "not-fake" mostly by [snopes.com](https://www.snopes.com/) (67285 articles), but also by [emergent.info](http://www.emergent.info/) (651 articles) and [politifact.com](https://www.politifact.com/) (1460 articles).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
 {% include_relative /_includes/html/documents_researched_per_organization.html %}
@@ -122,8 +122,8 @@ As it turned out, a similar level of complications existed in some of the articl
 
 ## The Story of Ghidora
 Below is the typical shape of a diagram showing the most commonly occuring words in a collection of texts such as ours and how often each word occurs.
-<div style="text-align: right">
-<img src="./assets/images/English_Raw_Top_40.png" alt="test" hspace="0" vspace="0" width="50%" align="center"/>
+<div style="text-align: center">
+<img src="./assets/images/English_Raw_Top_40.png" alt="test" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
 The most common words are all boring structural words as shown in this example. 
 Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which an article of 500 words is about.
@@ -136,13 +136,13 @@ Except one time, we saw the rare word 'ghidora.'
 
 We decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
-<div style="text-align: right">
-<img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<div style="text-align: center">
+<img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
 The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
 This demonstrates that a model can encounter a source which could include both fake and not fake news.
 Moreover URLs are likely to have advertising.
-Both of these issues greatly burden a model's training and probabily of assessing the plain text from a URL correctly. 
+Both of these issues greatly burden a model's training and probability of assessing the plain text from a URL correctly. 
 
 
 ## What about Model B?
