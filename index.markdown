@@ -120,9 +120,12 @@ As it turned out, a similar level of complications existed in some of the articl
 
 ## The Story of Ghidora
 Below is the typical shape of a diagram showing the most commonly occuring words in a collection of texts such as ours and how often each word occurs.
+
+
 <div style="text-align: center">
-<img src="assets/images/English_Raw_Top_40.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="./assets/images/English_Raw_Top_40.png" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
+
 
 The most common words are all boring structural words as shown in this example. 
 Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which an article of 500 words is about.
@@ -135,6 +138,7 @@ Except one time, we saw the rare word 'ghidora.'
 
 We decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
+
 <div style="text-align: right">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
