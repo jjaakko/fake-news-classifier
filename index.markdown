@@ -14,7 +14,7 @@ Without going into details on the algorithms we have used, we provide an overvie
 We believe that truth investigators would want to understand at this level of detail in order to have confidence to use our system's automatically generated truth assessment as a starting point or a way to prioritize their work.
 For full details on the algorithms, please see our [technical report](link to technical report).
 
-## We gathered data from our target users
+## We Gathered Articles Gold-labeled by Some of Our Target users
 Social media has fundamentally changed information, giving the public direct access to more information than ever before. 
 But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
 The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/)
@@ -42,7 +42,7 @@ Below is an interactive frequency bar-chart showing the lengths of the 70000 art
 Most articles fall in the category of 500 words or fewer. You can hover the over the bars to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
  
-## Simple explanation of performance measures in natural language processing (NLP)
+## Simple Explanation of Performance Measures in Natural Language Processing (NLP)
 We did this as a project for the course [Introduction to Data Science at University of Helsinki in Fall of 2020](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2021-b449b3af-1ec9-4a04-8a4c-20461c02dbc4), taught by [Prof. Teemu Roos](https://www.cs.helsinki.fi/u/ttonteri/) assisted by [Saska Dönges](https://fuksiwiki.tko-aly.fi/Tuutorit2019#Tutor_Saska_D.C3.B6nges) and [Ioanna Bouri](https://www.linkedin.com/in/ioannabouri/?originalSubdomain=fi).
 
 One of the parameters of the project was to separate out the explanation/message to our target users (i.e. this blog you are reading) from a technical report to our instructors.
@@ -91,7 +91,7 @@ So we have to dig deeper.
 * Stating simply "the recall of Model-A" usually refers to recall with respect to the label for which Model-0 would have recalled 0%.
   So the recall of our Model-A is 68.3%
 
-What about [precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
+What About [Precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
 * Of the times Model-A made an assessment of not-fake, how many times was it correct? 
   88.2% (i.e. 4180/(4180 + 559)).
   This is the precision of Model-A with respect to not-fake.
@@ -109,7 +109,7 @@ The [F1 score](https://en.wikipedia.org/wiki/F1_score) is a way to combine preci
 Different measures from this list are important to different members of the NLP field.
 For example, [Facebook and Microsoft only report on the precision of their models](https://venturebeat.com/2020/04/07/microsoft-ai-fake-news-better-than-state-of-the-art-baselines/) (i.e. when assessing articles as fake).
 
-## Why didn't we use the articles labeled by Politifact?
+## Why Didn't We Use the Articles Labeled by Politifact?
 We excluded articles gold labeled by politifact. 
 Initially, we thought their rating system was confusing or might be too complicated to train the model on.
 This is because the labels (fake or not fake) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
@@ -131,10 +131,10 @@ We subsequently built both Model-A (performance given above) and Model-B in this
 Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
 This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
 
-## Future work
+## Future Work
 We plan to improve our performance.
 To see more technical next steps, please see our [technical report](link to technical report). 
-The future work items we can talk about here are as follows:
+The future-work items we can talk about here are as follows:
 * We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
   All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
 * Our hypothesis is that one way we can improve the models with respect to the stories is to exclude all the words the occured only once.
