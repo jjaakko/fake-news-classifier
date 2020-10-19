@@ -11,13 +11,15 @@ We have built a text classification system for predicting whether a news article
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
-We believe that truth investigators would want to understand at this level of detail in order to have confidence to use our system's automatically generated truth assessment as a starting point or a way to prioritize their work.
+We believe that truth investigators would want to understand at this level of detail in order to have confidence to use our system's automatically generated truth assessment.
+We propose that they do this for a starting point or as a way to prioritize their work.
 For full details on the algorithms, please see our [technical report](link to technical report).
 
-## We Gathered Articles Gold-labeled by Some of Our Target users
+## For Data, We Gathered News Articles Gold-labeled by Some of Our Target Users
 Social media has fundamentally changed information, giving the public direct access to more information than ever before. 
 But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
 The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/)
+.
 
 <div style="text-align: center">
 <img src="./assets/images/278409.png" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
@@ -67,14 +69,14 @@ We used our the remaining (approximately) 90% of the articles and used them to [
 Then we put Model-A to work on the 6940 articles it had never "seen."
 * Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as not-fake (True label: 0), 
   * Model-A assessed 
-   * 4180 of them correctly as not-fake (Predicted label: 0) and 
-   * 995 incorrectly as fake (Predicted label: 1).
+    * 4180 of them correctly as not-fake (Predicted label: 0) and 
+    * 995 incorrectly as fake (Predicted label: 1).
 * Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (True label: 1), 
   * Model-A assessed 
     * 559 incorrectly as not-fake (Predicted label: 0) and
     * 1206 correctly as fake (Predicted label: 1).
 * The overall "accuracy" of Model-A is then 5386 (i.e. 4180 + 1206) correct divided by all 6940 or 77.61%.
-  This simple accuracy is rarely used for scenarios where the outcome is not close to 50-50. 
+  This simple accuracy is rarely used for scenarios where the true labels are not split close to 50-50. 
   For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled not-fake 0 by humans.
   (The training set of articles were in the same proportion of fakes to not-fakes as this testing set).
   So all we had to do is have a Model-0 that just always guessed not-fake and we would have an accuracy of 74.6%.
@@ -132,18 +134,19 @@ Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0
 This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
 
 ## Future Work
-We plan to improve our performance.
 To see more technical next steps, please see our [technical report](link to technical report). 
 The future-work items we can talk about here are as follows:
-* We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
+* We plan to improve our performance.
+  * We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
   All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
-* Our hypothesis is that one way we can improve the models with respect to the stories is to exclude all the words the occured only once.
+  * Our hypothesis is that one way we can improve the models with respect to the stories is to exclude all the words the occured only once.
   If this is successful, we will push the threshold frequency for words to exclude (e.g. all words with frequency less than 10 or 20, etc. will be excluded as features).
-* An easier item will be to test our models or improved versions thereof on the articles labeled by Politifact to check if our concerns were justified.
-* Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
-  While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
-  * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
-  * This will also mean new models for Finnish and other languages.
+* Increasing scope
+  * An easier item will be to test our models or improved versions thereof on the articles labeled by Politifact to check if our concerns were justified.
+  * Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
+    While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
+    * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
+    * This will also mean new models for Finnish and other languages.
 <img src="./assets/images/https___blogs-images.forbes.com_niallmccarthy_files_2019_06_20190612_Fake_News_Forbes.jpg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
