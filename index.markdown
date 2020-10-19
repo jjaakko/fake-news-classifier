@@ -192,15 +192,15 @@ Let’s see this example play out!
 </div>
 As we can see, the word “gender” when talked about in fake articles, is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in real articles, the word is more similar to transgender, intersex, dysphoria and genders. We can speculate from this that the real news version of gender is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
 
-Below, we can see the different topics that our target word “God” occurs in. 
+<br>Below, we can see the different topics that our target word “God” occurs in. 
 <div style="text-align: center">
 <img src="assets/images/god.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
 Whereas the real news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
 
-Finally, we can see the visualization below for the word 'drug'
+<br>Finally, we can see the visualization below for the word 'drug'
 <div style="text-align: center">
-<img src="assets/images/drugs.jpeg" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/drugs.jpeg" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
 
