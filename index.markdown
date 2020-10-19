@@ -119,7 +119,30 @@ Moreover we had very few articles from Politifact so it made the decision to exc
 As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well (see the story of ghidora) for other reasons.
 
 ## The Story of Ghidora
-# Need a visual of word frequencies.
+Below is the typical shape of a diagram showing the most commonly occuring words in a collection of texts such as ours and how often each word occurs.
+<div style="text-align: center">
+<img src="assets/images/English_Raw_Top_40.png alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+</div>
+
+The most common words are all boring structural words as shown in this example. 
+Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which an article of 500 words is about.
+Lastly, there is the "long tail" of words which make up the majority of words.
+They occur only once or nearly once.
+In our collection of 70000 articles, we had over 6 billion tokens even though the English language has fewer than 200000 words.
+Most of these are numerals and user names, etc.
+As you can imagine, drawing random samples of 200 tokens at a time for curiosity, we almost never saw words with frequency higher than 1 or any real words at all.
+Except one time, we saw the rare word 'ghidora.'
+
+We decided that we had to follow the trail and see what article it was in.
+This led us to a perfect example which illustrates why an article can be problematic.
+<div style="text-align: center">
+<img src="assets/images/English_Raw_Top_40.png alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
+</div>
+The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea] (http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
+This demonstrates that a model can encounter a source which could include both fake and not fake news.
+Moreover URLs are likely to have advertising.
+Both of these issues greatly burden a model's training and probabily of assessing the plain text from a URL correctly. 
+
 
 ## What about Model B?
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TFIDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
@@ -128,7 +151,7 @@ An explanation of TFIDF and doc2Vec and how we used them can be found in our [te
 At first, we trained and tested Model-B in an "unbalanced" way for which the confusion matrix is shown below. 
 
 <div style="text-align: center">
-<img src="assets/images/unchanged.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/ghidora.jpeg" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
 
 Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
@@ -161,6 +184,7 @@ The future-work items we can talk about here are as follows:
     While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
     * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
     * This will also mean new models for Finnish and other languages.
+
 <img src="./assets/images/https___blogs-images.forbes.com_niallmccarthy_files_2019_06_20190612_Fake_News_Forbes.jpg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
