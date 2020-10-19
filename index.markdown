@@ -39,6 +39,8 @@ We obtained gold labels for nearly 70000 articles from the three services (out o
 These articles were labeled as "fake" or "not-fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
+{% include_relative /_includes/html/documents_researched_per_organization.html %}
+
 # Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not-fake)
 Below is an interactive frequency bar-chart showing the lengths of the 70000 articles in terms of word count.
 Most articles fall in the category of 500 words or fewer. You can hover the over the bars to see the actual numbers.
