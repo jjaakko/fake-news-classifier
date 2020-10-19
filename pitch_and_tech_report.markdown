@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Pitch & technical report
+title: Technical Report
 permalink: /resources/
 ---
 
-Please have a look at our
-- [Pitch](../assets/In_Search_of_the_Real_Fake_News.pdf){:target="_blank"}
+This is our technical report containing technical details on our Models A and B
 - [Technical report](https://www.overleaf.com/read/chbzhbjgjhpt){:target="_blank"}

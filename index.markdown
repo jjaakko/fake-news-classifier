@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Introduction
+title: Blog
 ---
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
@@ -17,8 +17,9 @@ Social media has fundamentally changed information, giving the public direct acc
 But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
 The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/)
 
-
+<div style="text-align: center">
 <img src="./assets/images/278409.png" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+</div>
 
 This means that disinformation spreads further and faster online than it ever could before.
 [Rand.org](www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
@@ -26,7 +27,9 @@ For the 223 million social media users, there are fewer than 40 such services in
 Some of these focus on photos and videos.
 Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
 
+<div style="text-align: center">
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+</div>
 
 We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
 These articles were labeled as "fake" or "not-fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
@@ -50,7 +53,7 @@ A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).
 
 <div style="text-align: center">
-<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" width="50%" lign="center"/>
+<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" width="50%" align="center"/>
 </div>
 
 We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
