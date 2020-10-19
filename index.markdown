@@ -37,7 +37,10 @@ We obtained gold labels for nearly 70000 articles from the three services (out o
 These articles were labeled as "fake" or "not-fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
-#Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not-fake)
+# Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not-fake)
+Below is an interactive frequency bar-chart showing the lengths of the 70000 articles in terms of word count.
+Most articles fall in the category of 500 words or fewer. You can hover the over the bars to see the actual numbers.
+{% include_relative /_includes/html/histogram.html %}
  
 ## Simple explanation of performance measures in natural language processing (NLP)
 We did this as a project for the course [Introduction to Data Science at University of Helsinki in Fall of 2020](https://studies.helsinki.fi/courses/cur/hy-opt-cur-2021-b449b3af-1ec9-4a04-8a4c-20461c02dbc4), taught by [Prof. Teemu Roos](https://www.cs.helsinki.fi/u/ttonteri/) assisted by [Saska Dönges](https://fuksiwiki.tko-aly.fi/Tuutorit2019#Tutor_Saska_D.C3.B6nges) and [Ioanna Bouri](https://www.linkedin.com/in/ioannabouri/?originalSubdomain=fi).
@@ -104,22 +107,29 @@ The [F1 score](https://en.wikipedia.org/wiki/F1_score) is a way to combine preci
 * The F1 score of Model-A is 60.8% (i.e. 2 x 68.3% x 54.8%/(68.3% + 54.8%)).
 
 Different measures from this list are important to different members of the NLP field.
-For example, [Facebook and Microsoft only report on the precision of their models](https://venturebeat.com/2020/04/07/microsoft-ai-fake-news-better-than-state-of-the-art-baselines/) (i.e. when assessing an article as fake).
+For example, [Facebook and Microsoft only report on the precision of their models](https://venturebeat.com/2020/04/07/microsoft-ai-fake-news-better-than-state-of-the-art-baselines/) (i.e. when assessing articles as fake).
 
 ## Why didn't we use the articles labeled by Politifact?
+We excluded articles gold labeled by politifact. 
+Initially, we thought their rating system was confusing or might be too complicated to train the model on.
+This is because the labels (fake or not fake) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
+Moreover we had very few articles from Politifact so it made the decision to exclude those articles a little bit easier.
+As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well (see the story of ghidora) for other reasons.
 
 ## The Story of Ghidora
 # Need a visual of word frequencies.
-Below you can find how different articles are distributed in terms of word count.
-From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
-{% include_relative /_includes/html/histogram.html %}
 
 ## What about Model B?
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TFIDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
 An explanation of TFIDF and doc2Vec and how we used them can be found in our [technical report](link to technical report).
-At first, we trained and tested Model-B in an "unbalanced" way. Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
-(Balanced: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465) 
+At first, we trained and tested Model-B in an "unbalanced" way. 
+Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
+Finding the recall so low, we prioritized improving it and looked into various ways as to how.
+One method we found was to draw samples in a (still random) way which matches the ratios of the not-fake to fake from the 70000 articles in both the training set and testing set.
+We subsequently built both Model-A (performance given above) and Model-B in this "balanced" way.
+Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
+This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
 
 ## Future work
 We plan to improve our performance.
@@ -129,7 +139,7 @@ The future work items we can talk about here are as follows:
   All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
 * Our hypothesis is that one way we can improve the models with respect to the stories is to exclude all the words the occured only once.
   If this is successful, we will push the threshold frequency for words to exclude (e.g. all words with frequency less than 10 or 20, etc. will be excluded as features).
-* An easier item will be to rerun our models or improved versions thereof with the articles labeled by Politifact.
+* An easier item will be to test our models or improved versions thereof on the articles labeled by Politifact to check if our concerns were justified.
 * Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
   While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
   * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
