@@ -134,6 +134,10 @@ At first, we trained and tested Model-B in an "unbalanced" way for which the con
 Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
 Finding the recall so low, we prioritized improving it and looked into various ways as to how.
 One method we found was to draw samples in a (still random) way which matches the ratios of the not-fake to fake from the 70000 articles in both the training set and testing set.
+
+
+
+
 We subsequently built both Model-A (performance given above) and Model-B in this "balanced" way for which the confusion matrix is shown below.
 
 <div style="text-align: center">
