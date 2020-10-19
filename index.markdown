@@ -136,7 +136,7 @@ Except one time, we saw the rare word 'ghidora.'
 We decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
 <div style="text-align: right">
-<img src="assets/images/ghidora.jpeg alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="assets/images/ghidora.JPG alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea] (http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
 This demonstrates that a model can encounter a source which could include both fake and not fake news.
