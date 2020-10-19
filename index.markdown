@@ -5,6 +5,8 @@
 layout: home
 title: Blog
 ---
+
+## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
@@ -53,7 +55,7 @@ A funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).
 
 <div style="text-align: center">
-<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" width="50%" align="center"/>
+<img src="assets/images/Model_A_Confusion.jpg" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
 
 We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
