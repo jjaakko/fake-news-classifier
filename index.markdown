@@ -35,7 +35,7 @@ Of the services that assess text, the gross majority have fewer than 25 employee
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
-We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
+<br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
 These articles were labeled as "fake" or "not-fake" mostly by [snopes.com](https://www.snopes.com/) (67285 articles), but also by [emergent.info](http://www.emergent.info/) (651 articles) and [politifact.com](https://www.politifact.com/) (1460 articles).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
