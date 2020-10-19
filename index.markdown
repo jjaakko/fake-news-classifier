@@ -96,12 +96,14 @@ For example, [Facebook and Microsoft only report on the precision of their model
 ## Why didn't we use the articles labeled by Politifact?
 
 ## The Story of Ghidora
-Word frequencies.
+# Need a visual of word frequencies.
 Below you can find how different articles are distributed in terms of word count.
 From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
 
 ## What about Model B?
+(Balanced: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465, 
+Unbalanced Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177)
 
 ## Future work
 We plan to improve our performance.
