@@ -65,9 +65,11 @@ Then we put Model-A to work on the 6940 articles it had never "seen."
   Compared to this, our Model-A, who was working extremely hard, doesn't seem so impressive.
 
 So we have to dig deeper.
-* How many of the not-fakes did Model-A assess correctly? 80.77% (i.e. 4180/(4180 + 995)). 
+* How many of the not-fakes did Model-A assess correctly? 
+  80.77% (i.e. 4180/(4180 + 995)). 
   This is the percentage of not-fakes Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to not-fakes.
-* What is the recall of Model-A with respect to fakes? 68.3% (i.e. 1206/(1206 + 559)). 
+* What is the recall of Model-A with respect to fakes? 
+  68.3% (i.e. 1206/(1206 + 559)). 
   Model-0 would have had a recall of 0% for fakes because it would have blindly guessed not-fake for all.
   So Model-A is doing a lot better.
 * Stating simply "the recall of Model-A" usually refers to recall with respect to the label for which Model-0 would have recalled 0%.
@@ -75,10 +77,23 @@ So we have to dig deeper.
 
 What about [precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
 * Of the times Model-A made an assessment of not-fake, how many times was it correct? 
+  88.2% (i.e. 4180/(4180 + 559)).
+  This is the precision of Model-A with respect to not-fake.
+  Model-0's precision with respect to not-fake would have been the same 74.6% as for accuracy because it guesses not-fake for every article.
+* Of the times Model-A made an assessment of not-fake, how many times was it correct? 
+  This is the precision of Model-A with respect to fake.
+  54.8% (i.e. 1206/(995 + 1206)).
+  This is not great, but it's a lot better than Model O's precision for fake which, again, would have been 0.
+* And again, stating simply "the precision of Model-A" usually refers to precision with respect to the label for which Model-0 would have had 0% precision.
+  So the precision of our Model-A is 54.8%
 
-To see the exact formula for calculating F1 based on accuracy and precision, please see our [technical report](link to technical report).  
+The [F1 score](https://en.wikipedia.org/wiki/F1_score) is a way to combine precision and recall together in order to give a sense of how a model is doing using only one number.
+* The F1 score of Model-A is 60.8% (i.e. 2 x 68.3% x 54.8%/(68.3% + 54.8%)).
+
 Different measures from this list are important to different members of the NLP field.
-For example, Facebook and Microsoft only report on the precision of their models when assessing an article as fake.
+For example, [Facebook and Microsoft only report on the precision of their models] (i.e. when assessing an article as fake).
+
+## Why didn't we use the articles labeled by Politifact?
 
 ## The Story of Ghidora
 Word frequencies.
@@ -87,6 +102,7 @@ From the picture it's easy to see that most articles fall in the category of 500
 {% include_relative /_includes/html/histogram.html %}
 
 ## Future work
+We plan to improve our performance. 
 The future work items we can talk about here are as follows:
 * We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
   All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
