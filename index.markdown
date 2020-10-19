@@ -147,6 +147,9 @@ Both of these issues greatly burden a model's training and probability of assess
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 An explanation of TF-IDF and how we used it can be found in our [technical report](link to technical report).
 However, we want to leave you with an intuition about TF-IDF based on this word cloud based on Flea's [series of] article[s] [one of] which contains ghidora.
+<div style="text-align: center">
+<img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
+</div>
 
 ## What about Model B?
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
@@ -184,14 +187,22 @@ We then take the top 10 most similar words to “gender” from both the real ne
 Then, we plot all of the words, including the real news version of “gender” and the fake news version of “gender,” and see if we can gain any insights. 
 Let’s see this example play out!
 
-[gender pic]
-
+<div style="text-align: center">
+<img src="assets/images/gender.bmp" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+</div>
 As we can see, the word “gender” when talked about in fake articles, is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in real articles, the word is more similar to transgender, intersex, dysphoria and genders. We can speculate from this that the real news version of gender is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
 
-[god pic]
-
-We can again see the different topics that our target word “God” occurs in. 
+Below, we can see the different topics that our target word “God” occurs in. 
+<div style="text-align: center">
+<img src="assets/images/god.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+</div>
 Whereas the real news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
+
+Finally, we can see the visualization below for the word 'drug'
+<div style="text-align: center">
+<img src="assets/images/drugs.jpeg" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+</div>
+
 
 ## Future Work
 To see more technical next steps, please see our [technical report](link to technical report). 
