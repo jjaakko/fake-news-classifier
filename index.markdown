@@ -91,7 +91,7 @@ The [F1 score](https://en.wikipedia.org/wiki/F1_score) is a way to combine preci
 * The F1 score of Model-A is 60.8% (i.e. 2 x 68.3% x 54.8%/(68.3% + 54.8%)).
 
 Different measures from this list are important to different members of the NLP field.
-For example, [Facebook and Microsoft only report on the precision of their models] (i.e. when assessing an article as fake).
+For example, [Facebook and Microsoft only report on the precision of their models](https://venturebeat.com/2020/04/07/microsoft-ai-fake-news-better-than-state-of-the-art-baselines/) (i.e. when assessing an article as fake).
 
 ## Why didn't we use the articles labeled by Politifact?
 
@@ -101,8 +101,11 @@ Below you can find how different articles are distributed in terms of word count
 From the picture it's easy to see that most articles fall in the category of 500 words or less. You can hover the pointer over the image to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
 
+## What about Model B?
+
 ## Future work
-We plan to improve our performance. 
+We plan to improve our performance.
+To see more technical next steps, please see our [technical report](link to technical report). 
 The future work items we can talk about here are as follows:
 * We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
   All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
@@ -111,7 +114,8 @@ The future work items we can talk about here are as follows:
 * An easier item will be to rerun our models or improved versions thereof with the articles labeled by Politifact.
 * Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
   While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our pitch.
-  [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
-* To see more technical next steps, please see our [technical report](link to technical report).
+  * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
+  * This will also mean new models for Finnish and other languages.
+<img src="./assets/images/Slide2.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
