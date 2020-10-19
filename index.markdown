@@ -116,6 +116,6 @@ The future work items we can talk about here are as follows:
   While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our pitch.
   * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
   * This will also mean new models for Finnish and other languages.
-<img src="./assets/images/Slide2.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="./assets/images/https___blogs-images.forbes.com_niallmccarthy_files_2019_06_20190612_Fake_News_Forbes.jpg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
