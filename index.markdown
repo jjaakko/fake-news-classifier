@@ -8,7 +8,7 @@ title: Blog
 
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
-To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](LINK to pitch).
+To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake but also anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
 We believe that truth investigators would want to understand at this level of detail in order to have confidence to use our system's automatically generated truth assessment as a starting point or a way to prioritize their work.
@@ -115,8 +115,11 @@ From the picture it's easy to see that most articles fall in the category of 500
 {% include_relative /_includes/html/histogram.html %}
 
 ## What about Model B?
-(Balanced: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465, 
-Unbalanced Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177)
+We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TFIDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
+We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
+An explanation of TFIDF and doc2Vec and how we used them can be found in our [technical report](link to technical report).
+At first, we trained and tested Model-B in an "unbalanced" way. Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
+(Balanced: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465) 
 
 ## Future work
 We plan to improve our performance.
@@ -128,7 +131,7 @@ The future work items we can talk about here are as follows:
   If this is successful, we will push the threshold frequency for words to exclude (e.g. all words with frequency less than 10 or 20, etc. will be excluded as features).
 * An easier item will be to rerun our models or improved versions thereof with the articles labeled by Politifact.
 * Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
-  While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our pitch.
+  While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
   * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
   * This will also mean new models for Finnish and other languages.
 <img src="./assets/images/https___blogs-images.forbes.com_niallmccarthy_files_2019_06_20190612_Fake_News_Forbes.jpg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
