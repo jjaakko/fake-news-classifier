@@ -125,8 +125,6 @@ Below is the typical shape of a diagram showing the most commonly occuring words
 <div style="text-align: right">
 <img src="./assets/images/English_Raw_Top_40.png" alt="test" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-
-
 The most common words are all boring structural words as shown in this example. 
 Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which an article of 500 words is about.
 Lastly, there is the "long tail" of words which make up the majority of words.
@@ -142,7 +140,7 @@ This led us to a perfect example which illustrates why an article can be problem
 <div style="text-align: right">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea] (http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
+The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
 This demonstrates that a model can encounter a source which could include both fake and not fake news.
 Moreover URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probabily of assessing the plain text from a URL correctly. 
