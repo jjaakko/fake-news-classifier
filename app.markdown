@@ -8,5 +8,5 @@ permalink: /App/
 
 Our model's avatar welcomes the new reader/verifier.'
 <div style="text-align: center">
-<img src="./assets/images/App_1_welcome_border.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="./assets/images/App_1_welcome_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
