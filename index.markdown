@@ -36,12 +36,12 @@ Of the services that assess text, the gross majority have fewer than 25 employee
 </div>
 
 We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
-These articles were labeled as "fake" or "not-fake" by [snopes.com](https://www.snopes.com/), [emergent.info](http://www.emergent.info/) or [politifact.com](https://www.politifact.com/).
+These articles were labeled as "fake" or "not-fake" mostly by [snopes.com](https://www.snopes.com/) (67285), but also by [emergent.info](http://www.emergent.info/) (651) and [politifact.com](https://www.politifact.com/) (1460).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
 {% include_relative /_includes/html/documents_researched_per_organization.html %}
 
-# Include visualization(s) here of the 70000 articles (snopes or emergent or politifact and fake or not-fake)
+# Include visualization(s) here of the 70000 articles (fake or not-fake)
 Below is an interactive frequency bar-chart showing the lengths of the 70000 articles in terms of word count.
 Most articles fall in the category of 500 words or fewer. You can hover the over the bars to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}
@@ -122,8 +122,6 @@ As it turned out, a similar level of complications existed in some of the articl
 
 ## The Story of Ghidora
 Below is the typical shape of a diagram showing the most commonly occuring words in a collection of texts such as ours and how often each word occurs.
-
-
 <div style="text-align: right">
 <img src="./assets/images/English_Raw_Top_40.png" alt="test" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
@@ -138,7 +136,6 @@ Except one time, we saw the rare word 'ghidora.'
 
 We decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
-
 <div style="text-align: right">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
