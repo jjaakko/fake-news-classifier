@@ -139,16 +139,17 @@ This led us to a perfect example which illustrates why an article can be problem
 <div style="text-align: center">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
-The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list.
+The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list (too far in fact to include in the snapshot above).
 This demonstrates that a model can encounter a source which could include both fake and not fake news.
 Moreover URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probability of assessing the plain text from a URL correctly. 
 
+We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
+An explanation of TF-IDF and how we used it can be found in our [technical report](link to technical report).
+However, we want to leave you with an intuition about TF-IDF based on this word cloud based on Flea's [series of] article[s] [one of] which contains ghidora.
 
 ## What about Model B?
-We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
-An explanation of TF-IDF and doc2Vec and how we used them can be found in our [technical report](link to technical report).
 At first, we trained and tested Model-B in an "unbalanced" way for which the confusion matrix is shown below. 
 
 <div style="text-align: center">
@@ -170,6 +171,19 @@ We subsequently built both Model-A (performance given above) and Model-B in this
 
 Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
 This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
+
+An explanation of doc2Vec and how we used them can be found in our [technical report](link to technical report).
+However, we want to leave you with an intuition about word2vec and by extension doc2vec based on the visualizations below representing the words "gender" and "god" (we have lowercased all words for the models).
+We have done some research with how the words have been used in both the real and fake articles. For this, we employed a word embedding model (wikipedia link to word embeddings). We did this by first converting the words to numerical representations, and then comparing the similarity of these vectors. This is achievable because similar words tend to have similar contexts, and we can then model semantic relations as geometric ones.
+We borrow code from the TWEC project (git link here) and have written our own visualization code (link to the file in git?). First, we take a target word, e.g. “gender.” We then take the top 10 most similar words to “gender” from both the real news articles and the fake news articles. Then, we plot all of the words, including the real news version of “gender” and the fake news version of “gender,” and see if we can gain any insights. Let’s see this example play out!
+
+[gender pic]
+
+As we can see, the word “gender” when talked about in fake articles, is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in real articles, the word is more similar to transgender, intersex, dysphoria and genders. We can speculate from this that the real news version of gender is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
+
+[god pic]
+
+We can again see the different topics that our target word “God” occurs in. Whereas the real news articles are most likely to discuss “God” in a somewhat typical, common or neutral way, it is pretty clear that the fake news version of “God” is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and contemn other religions). 
 
 ## Future Work
 To see more technical next steps, please see our [technical report](link to technical report). 
