@@ -64,23 +64,23 @@ A confusion matrix presents in a table the fundamental measures of performance i
 </div>
 
 We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
-We used the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
+We used the remaining (approximately) 90% of the articles to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
-* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as real (True label: 0), 
+* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as real (Gold Label: 0), 
   * Model-A assessed 
     * 4180 of them correctly as real (Predicted label: 0) and 
     * 995 incorrectly as fake (Predicted label: 1).
-* Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (True label: 1), 
+* Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (Gold Label: 1), 
   * Model-A assessed 
     * 559 incorrectly as real (Predicted label: 0) and
     * 1206 correctly as fake (Predicted label: 1).
 * The overall "accuracy" of Model-A is then 5386 (i.e. 4180 + 1206) correct divided by all 6940 or 77.61%.
-  This simple accuracy is rarely used for scenarios where the true labels are not split close to 50-50. 
-  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled real 0 by humans.
+  This simple accuracy is rarely used for scenarios where the gold labels are not split close to 50-50. 
+  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled real (Gold Label: 0) by humans.
   (The training set of articles were in the same proportion of fakes to reals as this testing set).
-  So all we had to do is have a Model-0 that just always guessed real and we would have an accuracy of 74.6%.
-  Compared to this, our Model-A, who was working extremely hard, doesn't seem so impressive.
+  So if we had a Model-0 that just always guessed real, we would have an accuracy of 74.6%.
+  Compared to this, our Model-A, despite working extremely hard, doesn't seem so impressive.
 
 So we have to dig deeper.
 * How many of the reals did Model-A assess correctly? 
@@ -161,7 +161,7 @@ We also created Model-B using an algorithm based on something called [doc2Vec](h
 At first, we trained and tested Model-B in an "unbalanced" way for which the confusion matrix is shown below. 
 
 <div style="text-align: center">
-<img src="assets/images/unchanged.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/unchanged.png" alt="Photo" hspace="0" vspace="0" width="70%" align="center"/>
 </div>
 
 Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
@@ -174,7 +174,7 @@ One method we found was to draw samples in a (still random) way which matches th
 We subsequently built both Model-A (performance given above) and Model-B in this "balanced" way for which the confusion matrix is shown below.
 
 <div style="text-align: center">
-<img src="assets/images/balanced.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/balanced.png" alt="Photo" hspace="0" vspace="0" width="80%" align="center"/>
 </div>
 
 Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
