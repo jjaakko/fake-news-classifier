@@ -9,11 +9,11 @@ title: Blog
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
-This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to quickly be able to paste in a story and get an indication of whether it is fake.
+This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to be able to paste in a story and quickly get an indication of whether it is fake.
 <br>
 <br>Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
-We believe that truth investigators would want to understand at this level of detail in order to have the confidence to use our system's automatically generated fakeness assessment.
-We propose that they use it at least as a starting point or as a way to prioritize what must be endless work.
+We believe that truth investigators would want to understand our work at this level of detail in order to have the confidence to use our system's automatically generated fakeness assessment.
+We propose that they use it at least as a starting point or as a way to prioritize what must be endless work for reasons described below.
 For full details on the algorithms we have used, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).<br>
 
 ## For Data, We Gathered News Articles Gold-labeled by Some of Our Target Users
