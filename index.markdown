@@ -128,13 +128,15 @@ The most common words are all boring structural words as shown in this example.
 Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which really give a sense of what the topic is in an article of 500 words.
 Lastly, there is the "long tail" of words which make up the majority of words.
 They occur only once or just a little more than that.
+<br>
+<br>
 In our collection of 70000 articles, we had around 40 million 'types' (distinct objects which could be words), even though the English language has fewer than 200000 words.
 Most of these 'types' were numerals and user names, etc.
 When we took into account the frequencies of all the types, there were 6 billion tokens (picture a token for every word/word-like-object in the bag of all words making up the 70000 articles).
 As you can imagine, drawing a random samples of 200 tokens at a time for curiosity, we almost never saw words with frequency higher than 1 or any real words at all.
-Except one time, we saw the obscure word 'ghidora.'
 
-We decided that we had to follow the trail and see what article it was in.
+Except one time, we saw the obscure word 'ghidora.'
+So we decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
 <div style="text-align: center">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
@@ -153,6 +155,7 @@ However, we want to leave you with an intuition about TF-IDF using the word clou
 </div>
 The intuition behind TF-IDF is that it considers important those words that are common in a particular document but not common in the other documents in the data set. 
 The mathematical formulation of TF-IDF produces high scores for these document-specific important words.
+
 The largest words in the word cloud above appear the most in Flea's archive while not appearing so much in the other 70000 articles.
 Of course, the word sizes are proportional to the TF-IDF scores which decrease as the word sizes decrease.
 Luckily, in this case, Flea is actually a credible underground journalist with a distinct vocabulary and his blog [Ghost of a Flea](http://www.ghostofaflea.com) does not have advertising. 
@@ -194,12 +197,14 @@ Words can be represented as points in high dimensional space.
 Computationally, we converted all the words from the fake articles to points represented in 300-dimensional space (yes 300)!
 These high dimensional points are represented by coordinate combinations called vectors.
 We did the same for all the words in the real articles.
+
 For this, we employed a [word embedding model](https://en.wikipedia.org/wiki/Word_embedding). 
 Then we compared the similarity of these vectors. 
 This is achievable because similar words tend to have similar contexts, and we can then represent relationships between meanings (semantic relations) as geometric relationships (spatial relations).
 First, we take a target word, e.g. “gender.” 
 The vector for "gender" as used in the fake articles is not exactly the same as the vector for the same word "gender" in the real articles.
 We then take the top 10 most similar words to “gender” from both the fake news articles and the real news articles. 
+
 We can plot all of the words, including the fake-news version of “gender” and the real news version of “gender” in two dimensional coordinates using projections.
 (Think of a projection as the shadow of the point from 300-dimensional space down onto 2-dimensional space.) 
 Let’s see this example play out!
