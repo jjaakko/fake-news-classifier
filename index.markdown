@@ -208,7 +208,7 @@ We can speculate from this that the real news version of gender (still in the mi
 
 <br>Below, we can see the different topics that our target word “God” occurs with. 
 <div style="text-align: center">
-<img src="assets/images/god.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/god.png" alt="Photo" hspace="0" vspace="0" width="60%" align="center"/>
 </div>
 Whereas the real news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” (in the lower right corner) is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
 
