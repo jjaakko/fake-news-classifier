@@ -9,7 +9,7 @@ title: Blog
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
-This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to quickly be able to paste is a story and get an indication whether it is fake.
+This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to quickly be able to paste in a story and get an indication whether it is fake.
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
 We believe that truth investigators would want to understand at this level of detail in order to have the confidence to use our system's automatically generated truth assessment.
 We propose that they use it at least as a starting point or as a way to prioritize what must be endless work.
@@ -117,7 +117,7 @@ We excluded articles gold labeled by politifact.
 Initially, we thought their rating system was confusing or might be too complicated to train the model on.
 This is because the labels (fake or not fake i.e. real) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
 Moreover we had very few articles from Politifact so it made the decision to exclude those articles a little bit easier.
-As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well (see the story of ghidora) for other reasons.
+As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well for other reasons (see the Story of Ghidora below).
 
 ## The Story of Ghidora
 Below is the typical shape of a diagram showing the most commonly occuring words in a collection of texts such as ours and how often each word occurs.
@@ -143,6 +143,7 @@ This demonstrates that a model can encounter a source which could include both f
 Moreover URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probability of assessing the plain text from a URL correctly. 
 
+## Simple Explanation of Term Frequency–Inverse Document Frequency
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 An explanation of TF-IDF and how we used it can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
 However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] which contains ghidora.
