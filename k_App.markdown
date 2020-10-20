@@ -6,8 +6,9 @@ layout: home
 title: App Snapshots
 ---
 ## Below are images of the version of our app which was demo'd to Saska Dönges and Group 3 on 2020 October 14th
-They are included to serve as instructions for the app.
+They are included to serve as instructions for the app
 
+<br>
 ## Subject to availability from the free service hosting our app, you may be able to access the app by following the link after the images
 Should the service not make the app available, we hope that you will review the images extensively
 
