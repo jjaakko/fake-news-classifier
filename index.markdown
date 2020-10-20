@@ -64,7 +64,7 @@ A confusion matrix presents in a table the fundamental measures of performance i
 </div>
 
 We took a random sample of 6940 out of our nearly 70000 articles and set these aside.
-We used our the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
+We used the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
 * Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as real (True label: 0), 
