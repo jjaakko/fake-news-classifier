@@ -36,7 +36,7 @@ Of the services that assess text, the gross majority have fewer than 25 employee
 </div>
 
 <br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
-These articles were labeled as "fake" or "not-fake" mostly by [snopes.com](https://www.snopes.com/) (67285 articles), but also by [emergent.info](http://www.emergent.info/) (651 articles) and [politifact.com](https://www.politifact.com/) (1460 articles).
+These articles were labeled as "fake" or "real" mostly by [snopes.com](https://www.snopes.com/) (67285 articles), but also by [emergent.info](http://www.emergent.info/) (651 articles) and [politifact.com](https://www.politifact.com/) (1460 articles).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
 {% include_relative /_includes/html/documents_researched_per_organization.html %}
@@ -68,38 +68,38 @@ We took a random sample of 6940 out of our nearly 70000 articles and set these a
 We used our the remaining (approximately) 90% of the articles and used them to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
-* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as not-fake (True label: 0), 
+* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as real (True label: 0), 
   * Model-A assessed 
-    * 4180 of them correctly as not-fake (Predicted label: 0) and 
+    * 4180 of them correctly as real (Predicted label: 0) and 
     * 995 incorrectly as fake (Predicted label: 1).
 * Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (True label: 1), 
   * Model-A assessed 
-    * 559 incorrectly as not-fake (Predicted label: 0) and
+    * 559 incorrectly as real (Predicted label: 0) and
     * 1206 correctly as fake (Predicted label: 1).
 * The overall "accuracy" of Model-A is then 5386 (i.e. 4180 + 1206) correct divided by all 6940 or 77.61%.
   This simple accuracy is rarely used for scenarios where the true labels are not split close to 50-50. 
-  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled not-fake 0 by humans.
-  (The training set of articles were in the same proportion of fakes to not-fakes as this testing set).
-  So all we had to do is have a Model-0 that just always guessed not-fake and we would have an accuracy of 74.6%.
+  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled real 0 by humans.
+  (The training set of articles were in the same proportion of fakes to reals as this testing set).
+  So all we had to do is have a Model-0 that just always guessed real and we would have an accuracy of 74.6%.
   Compared to this, our Model-A, who was working extremely hard, doesn't seem so impressive.
 
 So we have to dig deeper.
-* How many of the not-fakes did Model-A assess correctly? 
+* How many of the reals did Model-A assess correctly? 
   80.77% (i.e. 4180/(4180 + 995)). 
-  This is the percentage of not-fakes Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to not-fakes.
+  This is the percentage of reals Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to reals.
 * What is the recall of Model-A with respect to fakes? 
   68.3% (i.e. 1206/(1206 + 559)). 
-  Model-0 would have had a recall of 0% for fakes because it would have blindly guessed not-fake for all.
+  Model-0 would have had a recall of 0% for fakes because it would have blindly guessed real for all.
   So Model-A is doing a lot better.
 * Stating simply "the recall of Model-A" usually refers to recall with respect to the label for which Model-0 would have recalled 0%.
   So the recall of our Model-A is 68.3%
 
 What About [Precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
-* Of the times Model-A made an assessment of not-fake, how many times was it correct? 
+* Of the times Model-A made an assessment of real, how many times was it correct? 
   88.2% (i.e. 4180/(4180 + 559)).
-  This is the precision of Model-A with respect to not-fake.
-  Model-0's precision with respect to not-fake would have been the same 74.6% as for accuracy because it guesses not-fake for every article.
-* Of the times Model-A made an assessment of not-fake, how many times was it correct? 
+  This is the precision of Model-A with respect to real.
+  Model-0's precision with respect to real would have been the same 74.6% as for accuracy because it guesses real for every article.
+* Of the times Model-A made an assessment of real, how many times was it correct? 
   This is the precision of Model-A with respect to fake.
   54.8% (i.e. 1206/(995 + 1206)).
   This is not great, but it's a lot better than Model O's precision for fake which, again, would have been 0.
@@ -115,7 +115,7 @@ For example, [Facebook and Microsoft only report on the precision of their model
 ## Why Didn't We Use the Articles Labeled by Politifact?
 We excluded articles gold labeled by politifact. 
 Initially, we thought their rating system was confusing or might be too complicated to train the model on.
-This is because the labels (fake or not fake) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
+This is because the labels (fake or not fake i.e. real) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
 Moreover we had very few articles from Politifact so it made the decision to exclude those articles a little bit easier.
 As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well (see the story of ghidora) for other reasons.
 
@@ -139,7 +139,7 @@ This led us to a perfect example which illustrates why an article can be problem
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
 The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list (too far in fact to include in the snapshot above).
-This demonstrates that a model can encounter a source which could include both fake and not fake news.
+This demonstrates that a model can encounter a source which could include both fake and real news.
 Moreover URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probability of assessing the plain text from a URL correctly. 
 
@@ -154,7 +154,7 @@ The mathematical formulation of TF-IDF produces high scores for these document-s
 The largest words in the word cloud above appear the most in Flea's archive while not appearing so much in the other articles.
 Of course, the word sizes are proportional to the TF-IDF scores which decrease as the word sizes decrease.
 Luckily, in this case, Flea is actually a credible underground journalist with a distinct vocabulary and his blog [Ghost of a Flea](http://www.ghostofaflea.com/archives/2005_03.html) does not have advertising. 
-This may help explain why this article was assessed correctly as not fake by Model A despite its complications.
+This may help explain why this article was assessed correctly as not fake (i.e. real) by Model A despite its complications.
 
 ## What about Model B?
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
@@ -166,7 +166,7 @@ At first, we trained and tested Model-B in an "unbalanced" way for which the con
 
 Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
 Finding the recall so low, we prioritized improving it and looked into various ways as to how.
-One method we found was to draw samples in a (still random) way which matches the ratios of the not-fake to fake from the 70000 articles in both the training set and testing set.
+One method we found was to draw samples in a (still random) way which matches the ratios of the real to fake from the 70000 articles in both the training set and testing set.
 
 
 
@@ -187,28 +187,28 @@ Words can be represented as points in high dimensional space.
 (We exist in three dimensional space, but mathematically, it is possible to represent an infinite dimension).
 Computationally, we converted all the words from the fake articles in points represented in 300 dimensions.
 These high dimensional points are represented by coordinate combinations called vectors.
-We did the same for all the words in the not-fake articles.
+We did the same for all the words in the real articles.
 For this, we employed a [word embedding model](https://en.wikipedia.org/wiki/Word_embedding). 
 Then we compared similarity of these vectors. 
 This is achievable because similar words tend to have similar contexts, and we can then relationships between meanings (semantic relations) as geometric ones (spatial relations).
 First, we take a target word, e.g. “gender.” 
-The vector for "gender" as used in the fake articles is not exactly the same as the vector for the same word in the not-fake articles.
-We then take the top 10 most similar words to “gender” from both the fake news articles and the not-fake news articles. 
-We can plot all of the words, including the fake-news version of “gender” and the not-fake news version of “gender” in two dimensional coordinates using projections.
+The vector for "gender" as used in the fake articles is not exactly the same as the vector for the same word in the real articles.
+We then take the top 10 most similar words to “gender” from both the fake news articles and the real news articles. 
+We can plot all of the words, including the fake-news version of “gender” and the real news version of “gender” in two dimensional coordinates using projections.
 (Think of a projection as the shadow of the point from 300-dimensional space.) 
 Let’s see this example play out!
 
 <div style="text-align: center">
 <img src="assets/images/gender.bmp" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-As we can see, the word “gender” when talked about in fake articles (at the top middle of the diagram), is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in not-fake articles, the word is more similar to transgender, intersex, dysphoria and genders. 
-We can speculate from this that the not-fake news version of gender (still in the middle but almost at the bottom) is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
+As we can see, the word “gender” when talked about in fake articles (at the top middle of the diagram), is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in real articles, the word is more similar to transgender, intersex, dysphoria and genders. 
+We can speculate from this that the real news version of gender (still in the middle but almost at the bottom) is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
 
 <br>Below, we can see the different topics that our target word “God” occurs with. 
 <div style="text-align: center">
 <img src="assets/images/god.png" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
 </div>
-Whereas the not-fake news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” (in the lower right corner) is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
+Whereas the real news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” (in the lower right corner) is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
 
 ## Future Work
 To see more technical next steps, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/). 
