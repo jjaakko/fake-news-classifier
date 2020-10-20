@@ -9,17 +9,16 @@ title: Blog
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
 To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
-This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to quickly be able to paste in a story and get an indication whether it is fake.
+This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to quickly be able to paste in a story and get an indication of whether it is fake.
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
-We believe that truth investigators would want to understand at this level of detail in order to have the confidence to use our system's automatically generated truth assessment.
+We believe that truth investigators would want to understand at this level of detail in order to have the confidence to use our system's automatically generated fakeness assessment.
 We propose that they use it at least as a starting point or as a way to prioritize what must be endless work.
-For full details on the algorithms, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
+For full details on the algorithms we have used, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
 
 ## For Data, We Gathered News Articles Gold-labeled by Some of Our Target Users
 Social media has fundamentally changed information, giving the public direct access to more information than ever before. 
 But with the recent proliferation of low-quality or false content, it has become often nearly impossible to discern accurate information. 
-The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/)
-.
+The US is a country with [223 million social media users](https://www.statista.com/statistics/278409/number-of-social-network-users-in-the-united-states/) as of 2020.
 
 <div style="text-align: center">
 <img src="./assets/images/278409.png" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
@@ -29,13 +28,13 @@ This means that disinformation spreads further and faster online than it ever co
 [Rand.org](www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
 For the 223 million social media users, there are fewer than 40 such services in the US. 
 Some of these focus on photos and videos.
-Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in the checking.
+Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in detecting disinformation.
 
 <div style="text-align: center">
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
-<br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our experience).
+<br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our own experience).
 These articles were labeled as "fake" or "real" mostly by [snopes.com](https://www.snopes.com/) (67285 articles), but also by [emergent.info](http://www.emergent.info/) (651 articles) and [politifact.com](https://www.politifact.com/) (1460 articles).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
@@ -54,10 +53,10 @@ This did not mean that the blog had to be completely devoid of quantitative conc
 For example, if a team were doing a project for better prediction of pregnancy of an individual or if a tumor is malignant, that team would be encouraged to explain to the their target users the concept of a confidence interval from statistics.
 While the spread of lies through fake news ultimately leads people to doubt the truth and our project is therefore very serious, it is not so serious at a single moment as someone finding out whether or not they pregrant or will get cancer.
 
-Fortunately, neither are the different measures of accuracy in fake new prediction as difficult for a non-mathematically inclined person as a confidence interval.
+Fortunately, neither are the different measures of accuracy in fake news prediction as difficult for a non-mathematically inclined person as a confidence interval.
 
-Below is a diagram called a ["confusion matrix"](https://en.wikipedia.org/wiki/Confusion_matrix).
-A funny name, yes, but we hope the reason for it will become clear.
+Below is a diagram called a ["confusion matrix."](https://en.wikipedia.org/wiki/Confusion_matrix)
+It is a funny name, yes, but we hope the reason for it will become clear.
 A confusion matrix presents in a table the fundamental measures of performance in NLP (and machine learning in general).
 
 <div style="text-align: center">
