@@ -9,8 +9,22 @@ title: App
 ## Our model welcomes the user below (Think Terminator 2, not Terminator 1).
 
 <div style="text-align: center">
-<img src="./assets/images/278409.png" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+<img src="./assets/images/App_1_welcome_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
+
+
+## The user pastes the article below.
+
+<div style="text-align: center">
+<img src="./assets/images/App_2_Paste_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+</div>
+
+## Our model provides its assessment below.
+
+<div style="text-align: center">
+<img src="./assets/images/App_3_assessment_output_border.jpeg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
+</div>
+
 
 This means that disinformation spreads further and faster online than it ever could before.
 [Rand.org](www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
