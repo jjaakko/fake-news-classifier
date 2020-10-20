@@ -13,7 +13,7 @@ This blog is aimed at our target user who is primarily someone who investigates 
 Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
 We believe that truth investigators would want to understand at this level of detail in order to have the confidence to use our system's automatically generated truth assessment.
 We propose that they use it at least as a starting point or as a way to prioritize what must be endless work.
-For full details on the algorithms, please see our [technical report](link to technical report).
+For full details on the algorithms, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
 
 ## For Data, We Gathered News Articles Gold-labeled by Some of Our Target Users
 Social media has fundamentally changed information, giving the public direct access to more information than ever before. 
@@ -144,7 +144,7 @@ Moreover URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probability of assessing the plain text from a URL correctly. 
 
 We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
-An explanation of TF-IDF and how we used it can be found in our [technical report](link to technical report).
+An explanation of TF-IDF and how we used it can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
 However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] which contains ghidora.
 <div style="text-align: center">
 <img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
@@ -180,7 +180,7 @@ We subsequently built both Model-A (performance given above) and Model-B in this
 Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
 This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
 
-An explanation of doc2Vec and how we used them can be found in our [technical report](link to technical report).
+An explanation of doc2Vec and how we used them can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
 However, we want to leave you with an intuition about word2vec and by extension doc2vec based on the visualizations below representing the words "gender," "god" (we have lowercased all words for the models) and "drug."
 
 Words can be represented as points in high dimensional space.
@@ -211,7 +211,7 @@ We can speculate from this that the not-fake news version of gender (still in th
 Whereas the not-fake news articles are most likely to discuss “God” in a somewhat typical Christian/Western, common or neutral way (for the US), it is pretty clear that the fake news version of “God” (in the lower right corner) is more often talked about in terms of Islam or the Jewish culture (perhaps to disrespect and condemn minority religions). 
 
 ## Future Work
-To see more technical next steps, please see our [technical report](link to technical report). 
+To see more technical next steps, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/). 
 The future-work items we can talk about here are as follows:
 * We plan to improve our performance.
   * We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
