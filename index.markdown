@@ -180,6 +180,8 @@ We subsequently built both Model-A (performance given above) and Model-B in this
 Our balanced performance measures for Model-B were: Accuracy: 0.63, Precision: 0.375, Recall: 0.61, F1: 0.465).
 This improved our recall dramatically albeit at the cost of precision (and less importantly accuracy), however the overall F1 for the balanced Model-B was also dramatically better.
 
+## Simple Explanation of Word Embeddings Through Visualization
+
 An explanation of doc2Vec and how we used them can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
 However, we want to leave you with an intuition about word2vec and by extension doc2vec based on the visualizations below representing the words "gender," "god" (we have lowercased all words for the models) and "drug."
 
@@ -199,7 +201,7 @@ We can plot all of the words, including the fake-news version of “gender” an
 Let’s see this example play out!
 
 <div style="text-align: center">
-<img src="assets/images/gender.bmp" alt="Photo" hspace="0" vspace="0" width="50%" align="center"/>
+<img src="assets/images/gender.bmp" alt="Photo" hspace="0" vspace="0" width="75%" align="center"/>
 </div>
 As we can see, the word “gender” when talked about in fake articles (at the top middle of the diagram), is closer to words such as sexuality, patriarchy, pronouns and discourses, whereas in real articles, the word is more similar to transgender, intersex, dysphoria and genders. 
 We can speculate from this that the real news version of gender (still in the middle but almost at the bottom) is more neutral and scientific, whereas we can see common topics about gender in fake news, such as debating pronouns, etc.
