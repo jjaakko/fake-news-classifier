@@ -83,12 +83,12 @@ Then we put Model-A to work on the 6940 articles it had never "seen."
   Compared to this, our Model-A, despite working extremely hard, doesn't seem so impressive.
 
 So we have to dig deeper.
-* How many of the reals did Model-A assess correctly? 
+* How many of the gold reals did Model-A assess correctly? 
   80.77% (i.e. 4180/(4180 + 995)). 
-  This is the percentage of reals Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to reals.
-* What is the recall of Model-A with respect to fakes? 
+  This is the percentage of gold reals Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to gold reals.
+* What is the recall of Model-A with respect to gold fakes? 
   68.3% (i.e. 1206/(1206 + 559)). 
-  Model-0 would have had a recall of 0% for fakes because it would have blindly guessed real for all.
+  Model-0 would have had a recall of 0% for gold fakes because it would have blindly guessed real for all.
   So Model-A is doing a lot better.
 * Stating simply "the recall of Model-A" usually refers to recall with respect to the label for which Model-0 would have recalled 0%.
   So the recall of our Model-A is 68.3%
@@ -98,10 +98,10 @@ What About [Precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
   88.2% (i.e. 4180/(4180 + 559)).
   This is the precision of Model-A with respect to real.
   Model-0's precision with respect to real would have been the same 74.6% as for accuracy because it guesses real for every article.
-* Of the times Model-A made an assessment of real, how many times was it correct? 
+* Of the times Model-A made an assessment of fake, how many times was it correct? 
   This is the precision of Model-A with respect to fake.
   54.8% (i.e. 1206/(995 + 1206)).
-  This is not great, but it's a lot better than Model O's precision for fake which, again, would have been 0.
+  This is not great, but it's a lot better than Model O's precision for fake which would have been 0.
 * And again, stating simply "the precision of Model-A" usually refers to precision with respect to the label for which Model-0 would have had 0% precision.
   So the precision of our Model-A is 54.8%
 
@@ -114,7 +114,7 @@ For example, [Facebook and Microsoft only report on the precision of their model
 ## Why Didn't We Use the Articles Labeled by Politifact?
 We excluded articles gold labeled by politifact. 
 Initially, we thought their rating system was confusing or might be too complicated to train the model on.
-This is because the labels (fake or not fake i.e. real) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
+This is because the labels (fake or real) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
 Moreover we had very few articles from Politifact so it made the decision to exclude those articles a little bit easier.
 As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well for other reasons (see the Story of Ghidora below).
 
@@ -124,37 +124,38 @@ Below is the typical shape of a diagram showing the most commonly occuring words
 <img src="./assets/images/English_Raw_Top_40.png" alt="test" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
 The most common words are all boring structural words as shown in this example. 
-Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which an article of 500 words is about.
+Then, somewhere in the low frequencies (tens or twenties) are the juicy content words which really give a sense of what the topic is in an article of 500 words.
 Lastly, there is the "long tail" of words which make up the majority of words.
-They occur only once or nearly once.
-In our collection of 70000 articles, we had over 6 billion tokens even though the English language has fewer than 200000 words.
-Most of these are numerals and user names, etc.
-As you can imagine, drawing random samples of 200 tokens at a time for curiosity, we almost never saw words with frequency higher than 1 or any real words at all.
-Except one time, we saw the rare word 'ghidora.'
+They occur only once or just a little more than that.
+In our collection of 70000 articles, we had around 40 million 'types' (distinct objects which could be words), even though the English language has fewer than 200000 words.
+Most of these 'types' were numerals and user names, etc.
+When we took into account the frequencies of all the types, there were 6 billion tokens (picture a token for every word/word-like-object in the bag of all words making up the 70000 articles).
+As you can imagine, drawing a random samples of 200 tokens at a time for curiosity, we almost never saw words with frequency higher than 1 or any real words at all.
+Except one time, we saw the obscure word 'ghidora.'
 
 We decided that we had to follow the trail and see what article it was in.
 This led us to a perfect example which illustrates why an article can be problematic.
 <div style="text-align: center">
 <img src="assets/images/ghidora.JPG" alt="Photo" hspace="0" vspace="0" width="65%" align="center"/>
 </div>
-The URL leads to not a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the list (too far in fact to include in the snapshot above).
+The URL leads not to a single story, but a series of almost unrelated stories by a blogger named [Flea](http://www.ghostofaflea.com/archives/2005_03.html) and 'ghidora' is very far down the series (too far in fact to include in the snapshot above).
 This demonstrates that a model can encounter a source which could include both fake and real news.
-Moreover URLs are likely to have advertising.
+Moreover, as we found in many, many cases, URLs are likely to have advertising.
 Both of these issues greatly burden a model's training and probability of assessing the plain text from a URL correctly. 
 
 ## Simple Explanation of Term Frequency–Inverse Document Frequency
-We created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
+To address the above problem, we created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 An explanation of TF-IDF and how we used it can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
-However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] which contains ghidora.
+However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] containing ghidora.
 <div style="text-align: center">
 <img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 The intuition behind TF-IDF is that it considers important those words that are common in a particular document but not common in the other documents in the data set. 
 The mathematical formulation of TF-IDF produces high scores for these document-specific important words.
-The largest words in the word cloud above appear the most in Flea's archive while not appearing so much in the other articles.
+The largest words in the word cloud above appear the most in Flea's archive while not appearing so much in the other 70000 articles.
 Of course, the word sizes are proportional to the TF-IDF scores which decrease as the word sizes decrease.
 Luckily, in this case, Flea is actually a credible underground journalist with a distinct vocabulary and his blog [Ghost of a Flea](http://www.ghostofaflea.com/archives/2005_03.html) does not have advertising. 
-This may help explain why this article was assessed correctly as not fake (i.e. real) by Model A despite its complications.
+This may help explain why this article was assessed correctly as real by Model A despite the article's complications.
 
 ## What about Model B?
 We also created Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of word2vec.
