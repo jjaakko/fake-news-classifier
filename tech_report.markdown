@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: Technical Report
 permalink: /resources/
 ---
