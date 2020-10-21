@@ -51,7 +51,7 @@ We did this as a project for the course [Introduction to Data Science at Univers
 One of the parameters of the project was to separate out the explanation/message to our target users (i.e. this blog you are reading) from a technical report to our instructors.
 This did not mean that the blog had to be completely devoid of quantitative concepts.
 
-For example, if a team were doing a project for better prediction of pregnancy of an individual or if a tumor is malignant, that team would be encouraged to explain to the their target users the concept of a confidence interval from statistics.
+For example, if a team were doing a project for better prediction of pregnancy of an individual or whether a tumor is malignant, that team would be encouraged to explain to the their target users the concept of a confidence interval from statistics.
 While the spread of lies through fake news ultimately leads people to doubt the truth and our project is therefore very serious, it is not so serious at a single moment as someone finding out whether or not they pregrant or will get cancer.
 
 Fortunately, neither are the different measures of accuracy in fake news prediction as difficult for a non-mathematically inclined person as a confidence interval.
