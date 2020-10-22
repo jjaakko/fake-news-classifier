@@ -238,3 +238,5 @@ The future-work items we can talk about here are as follows:
 <img src="./assets/images/https___blogs-images.forbes.com_niallmccarthy_files_2019_06_20190612_Fake_News_Forbes.jpg" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 
 <br><br>All images are included under [fair use](https://www.socialmediaexaminer.com/copyright-fair-use-and-how-it-works-for-online-images/).
+<br><br>--Dean Rahman, Jaakko Kuurne, Teemu Pöhyönen
+<br>first.last@helsinki.fi
