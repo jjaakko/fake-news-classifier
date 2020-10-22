@@ -8,7 +8,7 @@ title: Blog
 
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
-To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News_Pitch.pdf).
+To learn about our motivation for choosing to work on this kind of system and our longer-term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News_Pitch.pdf).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to be able to paste in a story and quickly get an indication of whether it is fake.
 <br>
 <br>Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
@@ -29,20 +29,20 @@ This means that disinformation spreads further and faster online than it ever co
 [The Rand Corporation](http://www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
 For the 223 million social media users, there are fewer than 40 such services in the US. 
 Some of these focus on photos and videos.
-Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI or any machine learning automation in detecting disinformation.
+Of the services that assess text, the large majority have fewer than 25 employees and do not employ any AI or any machine learning automation in detecting disinformation.
 
 <div style="text-align: center">
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
-<br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renowned (based only on our own experience).
+<br>We obtained "gold labels" for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renowned (based only on our own experience).
 These articles were labeled as "fake" or "real" mostly by [Snopes](https://www.snopes.com/) (67285 articles), but also by [Emergent](http://www.emergent.info/) (651 articles) and [Politifact](https://www.politifact.com/) (1460 articles).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
 {% include_relative /_includes/html/documents_researched_per_organization.html %}
 
 Below is an interactive frequency bar-chart showing the lengths of the 70000 articles in terms of word count.
-Most articles fall in the category of 500 words or fewer. You can hover the over the bars to see the actual numbers.
+Most articles fall in the category of 500 words or fewer. You can hover over the bars to see the actual numbers.
 {% include_relative /_includes/html/histogram.html %}<br>
  
 ## Simple Explanation of Performance Measures in Natural Language Processing (NLP)
@@ -51,8 +51,8 @@ We did this as a project for the course [Introduction to Data Science at Univers
 One of the parameters of the project was to separate out the explanation/message to our target users (i.e. this blog you are reading) from a technical report to our instructors.
 This did not mean that the blog had to be completely devoid of quantitative concepts.
 
-For example, if a team were doing a project for better prediction of pregnancy of an individual or whether a tumor is malignant, that team would be encouraged to explain to the their target users the concept of a confidence interval from statistics.
-While the spread of lies through fake news ultimately leads people to doubt the truth and our project is therefore very serious, it is not so serious at a single moment as someone finding out whether or not they are pregrant or will get cancer.
+For example, if a team were doing a project for better prediction of pregnancy of an individual or whether a tumor is malignant, that team would be encouraged to explain to their target users the concept of a confidence interval from statistics.
+While the spread of lies through fake news ultimately leads people to doubt the truth and our project is therefore very serious, it is not so serious at a single moment as someone finding out whether or not they are pregnant or will get cancer.
 
 Fortunately, neither are the different measures of accuracy in fake news prediction as difficult for a non-mathematically inclined person as a confidence interval.
 
@@ -68,19 +68,19 @@ We took a random sample of 6940 out of our nearly 70000 articles and set these a
 We used the remaining (approximately) 90% of the articles to ["train"](https://en.wikipedia.org/wiki/Machine_learning#Training_models) a model we will call Model-A. 
 (There is also a Model-B to be described soon.)
 Then we put Model-A to work on the 6940 articles it had never "seen."
-* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as real (Gold Label: 0), 
+* Of the 5175 (i.e. 4180 + 995) articles that had been labeled by Snopes or Emergent as "real" (Gold Label: 0), 
   * Model-A assessed 
-    * 4180 of them correctly as real (Predicted label: 0) and 
-    * 995 incorrectly as fake (Predicted label: 1).
-* Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as fake (Gold Label: 1), 
+    * 4180 of them correctly as "real" (Predicted label: 0) and 
+    * 995 incorrectly as "fake" (Predicted label: 1).
+* Similarly, of the 1765 (i.e. 559 + 1206) articles that had been labeled by Snopes or Emergent as "fake" (Gold Label: 1), 
   * Model-A assessed 
-    * 559 incorrectly as real (Predicted label: 0) and
-    * 1206 correctly as fake (Predicted label: 1).
+    * 559 incorrectly as "real" (Predicted label: 0) and
+    * 1206 correctly as "fake" (Predicted label: 1).
 * The overall "accuracy" of Model-A is then 5386 (i.e. 4180 + 1206) correct divided by all 6940 or 77.61%.
   This simple accuracy is rarely used for scenarios where the gold labels are not split close to 50-50. 
-  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled real (Gold Label: 0) by humans.
+  For example, our dataset had 74.6% (i.e. (4180 + 995)/6940) labeled "real" (Gold Label: 0) by humans.
   (The training set of articles were in the same proportion of fakes to reals as this testing set).
-  So if we had a Model-0 that just always guessed real, we would have an accuracy of 74.6%.
+  So if we had a Model-0 that just always guessed "real," we would have an accuracy of 74.6%.
   Compared to this, our Model-A, despite working extremely hard, doesn't seem so impressive.
 
 So we have to dig deeper.
@@ -89,20 +89,20 @@ So we have to dig deeper.
   This is the percentage of gold reals Model-A "recalled" correctly, so 80.77% is the recall of Model-A with respect to gold reals.
 * What is the recall of Model-A with respect to gold fakes? 
   68.3% (i.e. 1206/(1206 + 559)). 
-  Model-0 would have had a recall of 0% for gold fakes because it would have blindly guessed real for all.
+  Model-0 would have had a recall of 0% for gold fakes because it would have blindly guessed "real" for all.
   So Model-A is doing a lot better.
 * Stating simply "the recall of Model-A" usually refers to recall with respect to the label for which Model-0 would have recalled 0%.
   So the recall of our Model-A is 68.3%
 
 What About [Precision](https://en.wikipedia.org/wiki/Precision_and_recall)?
-* Of the times Model-A made an assessment of real, how many times was it correct? 
+* Of the times Model-A made an assessment of "real," how many times was it correct? 
   88.2% (i.e. 4180/(4180 + 559)).
-  This is the precision of Model-A with respect to real.
-  Model-0's precision with respect to real would have been the same 74.6% as for accuracy because it guesses real for every article.
-* Of the times Model-A made an assessment of fake, how many times was it correct? 
-  This is the precision of Model-A with respect to fake.
+  This is the precision of Model-A with respect to "real."
+  Model-0's precision with respect to "real" would have been the same 74.6% as for accuracy because it guesses "real" for every article.
+* Of the times Model-A made an assessment of "fake," how many times was it correct? 
+  This is the precision of Model-A with respect to "fake."
   54.8% (i.e. 1206/(995 + 1206)).
-  This is not great, but it's a lot better than Model O's precision for fake which would have been 0.
+  This is not great, but it's a lot better than Model O's precision for "fake" which would have been 0.
 * And again, stating simply "the precision of Model-A" usually refers to precision with respect to the label for which Model-0 would have had 0% precision.
   So the precision of our Model-A is 54.8%
 
@@ -110,12 +110,12 @@ The [F1 score](https://en.wikipedia.org/wiki/F1_score) is a way to combine preci
 * The F1 score of Model-A is 60.8% (i.e. 2 x 68.3% x 54.8%/(68.3% + 54.8%)).
 
 Different measures from this list are important to different members of the NLP field.
-For example, [Facebook and Microsoft only report on the precision of their models](https://venturebeat.com/2020/04/07/microsoft-ai-fake-news-better-than-state-of-the-art-baselines/) (i.e. when assessing articles as fake).<br>
+For example, [Facebook and Microsoft only report on the precision of their models](https://venturebeat.com/2020/04/07/microsoft-ai-fake-news-better-than-state-of-the-art-baselines/) (i.e. when assessing articles as "fake").<br>
 
 ## Why Didn't We Use the Articles Labeled by Politifact?
-We excluded articles gold labeled by politifact. 
+We excluded articles gold-labeled by Politifact. 
 Initially, we thought their rating system was confusing or might be too complicated to train the model on.
-This is because the labels (fake or real) did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
+This is because the labels ("fake" or "real") did not seem to represent a uniform interpretation of the “fakeness” of a news article across the sources. 
 Moreover we had very few articles from Politifact so it made the decision to exclude those articles a little bit easier.
 As it turned out, a similar level of complications existed in some of the articles gold-labeled by snopes and emergent as well for other reasons (see the Story of Ghidora below).<br>
 
@@ -133,7 +133,7 @@ They occur only once or just a little more than that.
 In our collection of 70000 articles, we had around 40 million 'types' (distinct objects which could be words), even though the English language has fewer than 200000 words.
 Most of these 'types' were numerals and user names, etc.
 When we took into account the frequencies of all the types, there were 6 billion tokens (picture a token for every word/word-like-object in the bag of all words making up the 70000 articles).
-As you can imagine, drawing a random samples of 200 tokens at a time for curiosity, we almost never saw words with frequency higher than 1 or any real words at all.
+As you can imagine, drawing random samples of 200 tokens at a time for curiosity, we almost never saw words with frequency higher than 1 or any real words at all.
 
 Except one time, we saw the obscure word 'ghidora.'
 So we decided that we had to follow the trail and see what article it was in.
@@ -149,7 +149,7 @@ Both of these issues greatly burden a model's training and probability of assess
 ## Simple Explanation of Term Frequency–Inverse Document Frequency
 To address the above problem, we created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 An explanation of TF-IDF and how we used it can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
-However, we want to leave you with an intuition about TF-IDF using the word cloud below which based on Flea's [series of] article[s] [one of] containing ghidora.
+However, we want to leave you with an intuition about TF-IDF using the word cloud below which is based on Flea's [series of] article[s] [one of] containing ghidora.
 <div style="text-align: center">
 <img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
@@ -159,7 +159,7 @@ The mathematical formulation of TF-IDF produces high scores for these document-s
 The largest words in the word cloud above appear the most in Flea's archive while not appearing so much in the other 70000 articles.
 Of course, the word sizes are proportional to the TF-IDF scores which decrease as the word sizes decrease.
 Luckily, in this case, Flea is actually a credible underground journalist with a distinct vocabulary and his blog [Ghost of a Flea](http://www.ghostofaflea.com) does not have advertising. 
-This may help explain why this article was assessed correctly as real by Model A despite the article's complications.<br>
+This may help explain why this article was assessed correctly as "real" by Model A despite the article's complications.<br>
 
 ## What about Model B?
 We also created a Model-B using an algorithm based on something called [doc2Vec](https://en.wikipedia.org/wiki/Word2vec#Extensions) which in turn is an extension of [word2vec](https://en.wikipedia.org/wiki/Word2vec).
@@ -171,7 +171,7 @@ At first, we trained and tested Model-B in an "unbalanced" way for which the con
 
 Our unbalanced performance measures for Model-B were Accuracy: 0.747, Precision: 0.608, Recall: 0.104, F1: 0.177.
 Finding the recall so low, we prioritized improving it and looked into various ways as to how.
-One method we found was to draw samples in a (still random) way which matches the ratios of the real to fake from the 70000 articles in both the training set and testing set.
+One method we found was to draw samples in a (still random) way which matches the ratios of the "real" to "fake" from the 70000 articles in both the training set and testing set.
 
 
 
@@ -225,7 +225,7 @@ Whereas the real news articles are most likely to discuss “God” (near the ce
 To see more technical next steps, please see our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/). 
 The future-work items we can talk about here are as follows:
 * We plan to improve our performance.
-  * We want to figure out how to extract the relevant story out from other stories (as discussed above with Ghidora) or advertising. 
+  * We want to figure out how to extract the relevant story out from surrounding stories (as discussed above with Ghidora) or advertising. 
   All indicators are that this is a project in and of itself but we would be looking to employ existing technologies so we can focus on the stories themselves.
 
 * Increasing scope
