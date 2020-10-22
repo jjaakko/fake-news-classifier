@@ -149,7 +149,7 @@ Both of these issues greatly burden a model's training and probability of assess
 ## Simple Explanation of Term Frequency–Inverse Document Frequency
 To address the above problem, we created Model-A using an algorithm based on something called [term frequency–inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf).
 An explanation of TF-IDF and how we used it can be found in our [technical report](https://jjaakko.github.io/fake-news-classifier/resources/).
-However, we want to leave you with an intuition about TF-IDF using the word cloud below which is based on Flea's [series of] article[s] [one of] containing ghidora.
+However, we want to leave you with an intuition about TF-IDF using the word cloud below which is based on Flea's [series of] article[s] [in the archive] containing ghidora.
 <div style="text-align: center">
 <img src="assets/images/wordcloud_ghidora.png" alt="Photo" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
