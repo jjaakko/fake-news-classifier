@@ -8,7 +8,7 @@ title: Blog
 
 ## Introduction
 We have built a text classification system for predicting whether a news article is real or fake. 
-To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
+To learn about our motivation for choosing to work on this kind of system and our longer term vision, please see our promotional [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News_Pitch.pdf).
 This blog is aimed at our target user who is primarily someone who investigates whether news is fake. But it could also be anyone who reads the news and wants to be able to paste in a story and quickly get an indication of whether it is fake.
 <br>
 <br>Without going into details on the algorithms we have used, we provide an overview here of how we built our system and explain how we assess its performance. 
@@ -29,13 +29,13 @@ This means that disinformation spreads further and faster online than it ever co
 [The Rand Corporation](http://www.rand.org), one of the [most influential](https://thebestschools.org/features/most-influential-think-tanks/) [think tanks](https://en.wikipedia.org/wiki/Think_tank), has compiled [a list of all the services that seek to ascertain the accuracy of information](https://www.rand.org/research/projects/truth-decay/fighting-disinformation/search.html#q=&typeOfTool=Verification).
 For the 223 million social media users, there are fewer than 40 such services in the US. 
 Some of these focus on photos and videos.
-Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI nor machine learning automation in detecting disinformation.
+Of the services that assess text, the gross majority have fewer than 25 employees and do not employ any AI or any machine learning automation in detecting disinformation.
 
 <div style="text-align: center">
 <img src="./assets/images/Slide3.JPG" alt="test" hspace="0" vspace="0" width="100%" align="center"/>
 </div>
 
-<br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renouned (based only on our own experience).
+<br>We obtained gold labels for nearly 70000 articles from the three services (out of the 40) which we perceived to be the most renowned (based only on our own experience).
 These articles were labeled as "fake" or "real" mostly by [Snopes](https://www.snopes.com/) (67285 articles), but also by [Emergent](http://www.emergent.info/) (651 articles) and [Politifact](https://www.politifact.com/) (1460 articles).
 Human-labeled instances which are presumed to be correct are referred to as "gold labels."
 
@@ -231,7 +231,7 @@ The future-work items we can talk about here are as follows:
 * Increasing scope
   * An easier item will be to test our models or improved versions thereof on the articles labeled by Politifact to check if our concerns were justified.
   * Last, but not least, we hope we have helped you develop the intuition that we need to train and test our models on more articles.
-    While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News.pdf).
+    While we intend to seek new, more recent articles from our current sources, the team _is_ located in Helsinki and we are eager to include Europe in our efforts as alluded to in the first slide of our [pitch](https://jjaakko.github.io/fake-news-classifier/assets/In_Search_of_the_Real_Fake_News_Pitch.pdf).
     * [EU vs Disinfo](https://euvsdisinfo.eu/) seems like a promising target user.	
     * This will also mean new models for Finnish and other languages.
 
